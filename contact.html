@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | Centispin Travel Agency</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --blue: #0876b9;
+            --blue-dark: #064c78;
+            --sky: #39b9e8;
+            --yellow: #ffc928;
+            --orange: #f7941d;
+            --green: #1c9c73;
+            --dark: #092536;
+            --light: #f3faff;
+            --white: #ffffff;
+            --gray: #657582;
+            --border: #dcecf4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Montserrat", sans-serif;
+            color: var(--dark);
+            background: var(--white);
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: min(1150px, 92%);
+            margin: auto;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            padding: 18px 0;
+        }
+
+        .nav-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-circle {
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            background: var(--white);
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.16);
+            overflow: hidden;
+        }
+
+        .logo-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+
+        .logo-text {
+            color: var(--white);
+            line-height: 1.1;
+        }
+
+        .logo-text strong {
+            display: block;
+            font-size: 18px;
+            font-weight: 800;
+            letter-spacing: 1.2px;
+        }
+
+        .logo-text span {
+            display: block;
+            font-size: 9px;
+            letter-spacing: 2px;
+            margin-top: 5px;
+            opacity: 0.9;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        nav a {
+            color: var(--white);
+            font-size: 13px;
+            font-weight: 700;
+            transition: 0.3s ease;
+            position: relative;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 0;
+            height: 2px;
+            background: var(--yellow);
+            transition: 0.3s ease;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--yellow);
+        }
+
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+        }
+
+        /* ================= HERO ================= */
+
+        .page-hero {
+            min-height: 470px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background:
+                linear-gradient(
+                    110deg,
+                    rgba(4, 76, 120, 0.96),
+                    rgba(8, 118, 185, 0.78)
+                ),
+                url("images/hero.jpg") center/cover no-repeat;
+        }
+
+        .page-hero::before {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border: 55px solid rgba(255, 201, 40, 0.14);
+            border-radius: 50%;
+            right: -100px;
+            top: 100px;
+        }
+
+        .page-hero::after {
+            content: "";
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            border: 35px solid rgba(57, 185, 232, 0.18);
+            border-radius: 50%;
+            left: -80px;
+            bottom: -60px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: var(--white);
+            max-width: 760px;
+            padding-top: 70px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            color: var(--yellow);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            margin-bottom: 16px;
+        }
+
+        .hero-content h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(44px, 7vw, 76px);
+            line-height: 1.05;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            max-width: 680px;
+            font-size: 17px;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.92);
+        }
+
+        /* ================= CONTACT SECTION ================= */
+
+        .contact-section {
+            padding: 90px 0;
+            background: var(--light);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 45px;
+            align-items: start;
+        }
+
+        .section-label {
+            color: var(--blue);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .contact-info h2 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(34px, 5vw, 50px);
+            line-height: 1.15;
+            margin-bottom: 18px;
+        }
+
+        .contact-info > p {
+            color: var(--gray);
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+
+        .contact-card {
+            background: var(--white);
+            border-radius: 18px;
+            padding: 22px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 30px rgba(6, 76, 120, 0.06);
+            transition: 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(6, 76, 120, 0.12);
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
+            border-radius: 14px;
+            background: rgba(8, 118, 185, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+        }
+
+        .contact-card:nth-child(2) .contact-icon {
+            background: rgba(247, 148, 29, 0.12);
+        }
+
+        .contact-card:nth-child(3) .contact-icon {
+            background: rgba(28, 156, 115, 0.12);
+        }
+
+        .contact-card h3 {
+            font-size: 14px;
+            margin-bottom: 3px;
+            color: var(--dark);
+        }
+
+        .contact-card p,
+        .contact-card a {
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        .contact-card a:hover {
+            color: var(--blue);
+        }
+
+        /* ================= FORM ================= */
+
+        .contact-form {
+            background: var(--white);
+            padding: 38px;
+            border-radius: 24px;
+            box-shadow: 0 20px 50px rgba(6, 76, 120, 0.1);
+            border: 1px solid var(--border);
+        }
+
+        .contact-form h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 34px;
+            margin-bottom: 8px;
+        }
+
+        .contact-form > p {
+            color: var(--gray);
+            font-size: 14px;
+            margin-bottom: 28px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 7px;
+            color: var(--dark);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            border: 1px solid #d7e5ec;
+            border-radius: 10px;
+            padding: 13px 14px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 13px;
+            color: var(--dark);
+            background: #fbfdff;
+            outline: none;
+            transition: 0.25s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--blue);
+            box-shadow: 0 0 0 3px rgba(8, 118, 185, 0.08);
+            background: var(--white);
+        }
+
+        .form-group textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            border: none;
+            border-radius: 10px;
+            padding: 15px 20px;
+            background: linear-gradient(135deg, var(--blue), var(--sky));
+            color: var(--white);
+            font-family: "Montserrat", sans-serif;
+            font-size: 14px;
+            font-weight: 800;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(8, 118, 185, 0.25);
+        }
+
+        .form-note {
+            font-size: 11px;
+            color: var(--gray);
+            text-align: center;
+            margin-top: 12px;
+        }
+
+        /* ================= QUICK CONTACT ================= */
+
+        .quick-contact {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .quick-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .quick-header h2 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(32px, 5vw, 46px);
+            margin-bottom: 12px;
+        }
+
+        .quick-header p {
+            color: var(--gray);
+        }
+
+        .quick-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .quick-card {
+            text-align: center;
+            padding: 32px 22px;
+            border-radius: 18px;
+            background: var(--light);
+            border: 1px solid var(--border);
+        }
+
+        .quick-card .icon {
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .quick-card h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .quick-card p {
+            color: var(--gray);
+            font-size: 13px;
+        }
+
+        .quick-card a {
+            color: var(--blue);
+            font-weight: 700;
+        }
+
+        .quick-card a:hover {
+            color: var(--orange);
+        }
+
+        /* ================= CTA ================= */
+
+        .cta {
+            padding: 80px 0;
+            background:
+                linear-gradient(
+                    110deg,
+                    var(--blue-dark),
+                    var(--blue)
+                );
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta::after {
+            content: "";
+            position: absolute;
+            width: 320px;
+            height: 320px;
+            border: 60px solid rgba(255, 201, 40, 0.12);
+            border-radius: 50%;
+            right: -120px;
+            top: -130px;
+        }
+
+        .cta-inner {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(34px, 5vw, 52px);
+            margin-bottom: 14px;
+        }
+
+        .cta p {
+            max-width: 650px;
+            margin: 0 auto 28px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 14px 26px;
+            border-radius: 9px;
+            background: var(--yellow);
+            color: var(--dark);
+            font-size: 13px;
+            font-weight: 800;
+            transition: 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background: var(--white);
+            transform: translateY(-2px);
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 55px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1fr;
+            gap: 45px;
+            padding-bottom: 40px;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .footer-logo {
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: var(--white);
+            padding: 5px;
+        }
+
+        .footer-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+
+        .footer-brand strong {
+            display: block;
+            font-size: 17px;
+            letter-spacing: 1px;
+        }
+
+        .footer-brand span {
+            font-size: 9px;
+            letter-spacing: 2px;
+            opacity: 0.7;
+        }
+
+        .footer-about {
+            color: rgba(255, 255, 255, 0.68);
+            font-size: 13px;
+            max-width: 350px;
+        }
+
+        footer h3 {
+            font-size: 14px;
+            margin-bottom: 16px;
+            color: var(--yellow);
+        }
+
+        .footer-links {
+            display: grid;
+            gap: 9px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.68);
+            font-size: 13px;
+            transition: 0.25s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--yellow);
+        }
+
+        .footer-contact {
+            display: grid;
+            gap: 9px;
+            color: rgba(255, 255, 255, 0.68);
+            font-size: 13px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 11px;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 900px) {
+            nav {
+                gap: 14px;
+            }
+
+            nav a {
+                font-size: 11px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .quick-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 700px) {
+            header {
+                padding: 12px 0;
+            }
+
+            .logo-circle {
+                width: 52px;
+                height: 52px;
+            }
+
+            .logo-text strong {
+                font-size: 15px;
+            }
+
+            .logo-text span {
+                font-size: 7px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .page-hero {
+                min-height: 430px;
+            }
+
+            .hero-content {
+                padding-top: 50px;
+            }
+
+            .contact-section {
+                padding: 65px 0;
+            }
+
+            .contact-form {
+                padding: 25px 20px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+        <div class="container nav-wrap">
+
+            <a href="index.html" class="logo">
+                <div class="logo-circle">
+                    <img src="images/logo.png" alt="Centispin Travel Agency Logo">
+                </div>
+
+                <div class="logo-text">
+                    <strong>CENTISPIN</strong>
+                    <span>TRAVEL AGENCY</span>
+                </div>
+            </a>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="destinations.html">Destinations</a>
+                <a href="why-us.html">Why Us</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="page-hero">
+
+        <div class="container hero-content">
+
+            <span class="eyebrow">CONTACT CENTISPIN</span>
+
+            <h1>Let's start your journey.</h1>
+
+            <p>
+                Have a travel question, need help planning your journey,
+                or ready to make a booking? Get in touch with Centispin
+                Travel Agency. We're here to help make your travel simpler.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT SECTION ================= -->
+
+    <section class="contact-section">
+
+        <div class="container contact-grid">
+
+            <!-- CONTACT INFORMATION -->
+
+            <div class="contact-info">
+
+                <div class="section-label">GET IN TOUCH</div>
+
+                <h2>We're here to help.</h2>
+
+                <p>
+                    Whether you're planning a personal trip, family holiday,
+                    group journey or business travel, contact us and let us
+                    know how we can assist you.
+                </p>
+
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">👤</div>
+
+                    <div>
+                        <h3>Contact Person</h3>
+                        <p>Beauty Robinson</p>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">📞</div>
+
+                    <div>
+                        <h3>Phone</h3>
+                        <p>
+                            <a href="tel:+67578391486">
+                                +675 78391486
+                            </a>
+                        </p>
+
+                        <p>
+                            <a href="tel:+67583301312">
+                                +675 83301312
+                            </a>
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">✉️</div>
+
+                    <div>
+                        <h3>Email</h3>
+
+                        <p>
+                            <a href="mailto:centispinta@gmail.com">
+                                centispinta@gmail.com
+                            </a>
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">📍</div>
+
+                    <div>
+                        <h3>Address</h3>
+
+                        <p>
+                            P.O. Box 166,<br>
+                            Brian Bell Plaza,<br>
+                            Gordons, NCD,<br>
+                            Papua New Guinea
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTACT FORM -->
+
+            <div class="contact-form">
+
+                <h2>Send us a message.</h2>
+
+                <p>
+                    Tell us a little about your travel plans and we'll
+                    get back to you.
+                </p>
+
+
+                <form id="contactForm">
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Your full name"
+                                required
+                            >
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="your@email.com"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="+675"
+                            >
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="travelType">Travel Type</label>
+
+                            <select id="travelType" name="travelType">
+
+                                <option value="">
+                                    Select travel type
+                                </option>
+
+                                <option value="leisure">
+                                    Leisure Travel
+                                </option>
+
+                                <option value="family">
+                                    Family Travel
+                                </option>
+
+                                <option value="group">
+                                    Group Travel
+                                </option>
+
+                                <option value="corporate">
+                                    Corporate Travel
+                                </option>
+
+                                <option value="business">
+                                    Business Travel
+                                </option>
+
+                                <option value="other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="destination">
+                            Destination
+                        </label>
+
+                        <input
+                            type="text"
+                            id="destination"
+                            name="destination"
+                            placeholder="Where would you like to go?"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            Message *
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            placeholder="Tell us about your travel plans..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <button type="submit" class="submit-btn">
+                        SEND MESSAGE
+                    </button>
+
+                    <p class="form-note">
+                        We look forward to hearing from you.
+                    </p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= QUICK CONTACT ================= -->
+
+    <section class="quick-contact">
+
+        <div class="container">
+
+            <div class="quick-header">
+
+                <div class="section-label">
+                    CONNECT WITH US
+                </div>
+
+                <h2>Choose how you'd like to reach us.</h2>
+
+                <p>
+                    Contact Centispin directly using the option that
+                    works best for you.
+                </p>
+
+            </div>
+
+
+            <div class="quick-grid">
+
+                <div class="quick-card">
+
+                    <div class="icon">📞</div>
+
+                    <h3>Call Us</h3>
+
+                    <p>
+                        Speak with us about your travel plans.
+                    </p>
+
+                    <p>
+                        <a href="tel:+67578391486">
+                            +675 78391486
+                        </a>
+                    </p>
+
+                </div>
+
+
+                <div class="quick-card">
+
+                    <div class="icon">✉️</div>
+
+                    <h3>Email Us</h3>
+
+                    <p>
+                        Send us your travel enquiry by email.
+                    </p>
+
+                    <p>
+                        <a href="mailto:centispinta@gmail.com">
+                            centispinta@gmail.com
+                        </a>
+                    </p>
+
+                </div>
+
+
+                <div class="quick-card">
+
+                    <div class="icon">📱</div>
+
+                    <h3>Call Our Second Line</h3>
+
+                    <p>
+                        You can also reach Centispin on:
+                    </p>
+
+                    <p>
+                        <a href="tel:+67583301312">
+                            +675 83301312
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CTA ================= -->
+
+    <section class="cta">
+
+        <div class="container cta-inner">
+
+            <h2>Your journey starts with a conversation.</h2>
+
+            <p>
+                Tell us where you want to go, and let Centispin
+                Travel Agency help you plan the journey.
+            </p>
+
+            <a href="mailto:centispinta@gmail.com" class="cta-btn">
+                EMAIL CENTISPIN
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div>
+
+                    <div class="footer-brand">
+
+                        <div class="footer-logo">
+                            <img
+                                src="images/logo.png"
+                                alt="Centispin Travel Agency Logo"
+                            >
+                        </div>
+
+                        <div>
+                            <strong>CENTISPIN</strong>
+                            <span>TRAVEL AGENCY</span>
+                        </div>
+
+                    </div>
+
+                    <p class="footer-about">
+                        A proudly Papua New Guinean-owned travel agency
+                        focused on reliable travel solutions, professional
+                        guidance and exceptional customer care.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h3>Quick Links</h3>
+
+                    <div class="footer-links">
+
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Us</a>
+                        <a href="services.html">Services</a>
+                        <a href="destinations.html">Destinations</a>
+                        <a href="why-us.html">Why Us</a>
+                        <a href="contact.html">Contact</a>
+
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <h3>Contact</h3>
+
+                    <div class="footer-contact">
+
+                        <span>Beauty Robinson</span>
+
+                        <a href="tel:+67578391486">
+                            +675 78391486
+                        </a>
+
+                        <a href="tel:+67583301312">
+                            +675 83301312
+                        </a>
+
+                        <a href="mailto:centispinta@gmail.com">
+                            centispinta@gmail.com
+                        </a>
+
+                        <span>
+                            P.O. Box 166, Brian Bell Plaza,
+                            Gordons, NCD, PNG
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © <span id="year"></span>
+                    Centispin Travel Agency. All rights reserved.
+                </span>
+
+                <span>
+                    Proudly Papua New Guinean
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        // Current year
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+
+        // Contact form
+        document.getElementById("contactForm").addEventListener(
+            "submit",
+            function(event) {
+
+                event.preventDefault();
+
+                const name =
+                    document.getElementById("name").value.trim();
+
+                const email =
+                    document.getElementById("email").value.trim();
+
+                const phone =
+                    document.getElementById("phone").value.trim();
+
+                const travelType =
+                    document.getElementById("travelType").value;
+
+                const destination =
+                    document.getElementById("destination").value.trim();
+
+                const message =
+                    document.getElementById("message").value.trim();
+
+
+                const subject =
+                    encodeURIComponent(
+                        "Travel Enquiry from " + name
+                    );
+
+
+                const body =
+                    encodeURIComponent(
+                        "Hello Centispin Travel Agency,%0A%0A" +
+                        "Name: " + name + "%0A" +
+                        "Email: " + email + "%0A" +
+                        "Phone: " + phone + "%0A" +
+                        "Travel Type: " + travelType + "%0A" +
+                        "Destination: " + destination + "%0A%0A" +
+                        "Message:%0A" + message
+                    );
+
+
+                window.location.href =
+                    "mailto:centispinta@gmail.com" +
+                    "?subject=" + subject +
+                    "&body=" + body;
+
+            }
+        );
+
+    </script>
+
+</body>
+</html>
