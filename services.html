@@ -1,0 +1,1665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Explore Centispin Travel Agency services including domestic and international flight booking support, itinerary planning, group travel, corporate travel and travel guidance.">
+
+    <title>Our Services | Centispin Travel Agency</title>
+
+
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+          rel="stylesheet">
+
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Montserrat", sans-serif;
+            color: #162536;
+            background: #ffffff;
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        /* =========================
+           COLORS
+        ========================== */
+
+        :root {
+
+            --blue: #0876b9;
+            --blue-dark: #064c78;
+            --sky: #39b9e8;
+            --yellow: #ffc928;
+            --orange: #f7941d;
+            --green: #1c9c73;
+            --dark: #092536;
+            --light: #f3faff;
+            --white: #ffffff;
+            --gray: #657582;
+
+        }
+
+
+        /* =========================
+           CONTAINER
+        ========================== */
+
+        .container {
+
+            width: 92%;
+            max-width: 1180px;
+            margin: auto;
+
+        }
+
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        header {
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            padding: 20px 0;
+
+        }
+
+        .navbar {
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+
+
+        /* =========================
+           LOGO
+        ========================== */
+
+        .logo {
+
+            display: flex;
+            align-items: center;
+            gap: 14px;
+
+        }
+
+        .logo-circle {
+
+            width: 68px;
+            height: 68px;
+            border-radius: 50%;
+            background: white;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.20);
+            border: 3px solid var(--yellow);
+
+        }
+
+        .logo-circle img {
+
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 50%;
+
+        }
+
+        .logo-text {
+
+            color: white;
+            line-height: 1.1;
+
+        }
+
+        .logo-text strong {
+
+            display: block;
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: 1px;
+
+        }
+
+        .logo-text span {
+
+            font-size: 10px;
+            letter-spacing: 2px;
+            font-weight: 600;
+            color: var(--yellow);
+
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================== */
+
+        .nav-links {
+
+            display: flex;
+            align-items: center;
+            gap: 28px;
+
+        }
+
+        .nav-links a {
+
+            color: white;
+            font-size: 13px;
+            font-weight: 600;
+            transition: 0.3s;
+
+        }
+
+        .nav-links a:hover {
+
+            color: var(--yellow);
+
+        }
+
+        .nav-links .active {
+
+            color: var(--yellow);
+
+        }
+
+        .contact-button {
+
+            background: var(--yellow);
+            color: var(--dark) !important;
+            padding: 11px 20px;
+            border-radius: 30px;
+
+        }
+
+        .contact-button:hover {
+
+            background: white;
+
+        }
+
+
+        /* =========================
+           PAGE HERO
+        ========================== */
+
+        .page-hero {
+
+            min-height: 540px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+
+            background:
+
+                linear-gradient(
+                    120deg,
+                    rgba(4,57,91,0.93),
+                    rgba(7,118,185,0.76),
+                    rgba(25,164,194,0.60)
+                ),
+
+                url("images/hero.jpg")
+                center/cover no-repeat;
+
+        }
+
+        .page-hero::before {
+
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: rgba(255,201,40,0.12);
+            right: -150px;
+            top: -180px;
+
+        }
+
+        .page-hero::after {
+
+            content: "";
+            position: absolute;
+            width: 330px;
+            height: 330px;
+            border-radius: 50%;
+            background: rgba(57,185,232,0.15);
+            left: -110px;
+            bottom: -160px;
+
+        }
+
+        .hero-content {
+
+            position: relative;
+            z-index: 2;
+            color: white;
+            text-align: center;
+            max-width: 850px;
+            margin: auto;
+            padding-top: 80px;
+
+        }
+
+        .hero-label {
+
+            display: inline-block;
+            color: var(--yellow);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            margin-bottom: 18px;
+
+        }
+
+        .hero-content h1 {
+
+            font-family: "Playfair Display", serif;
+            font-size: clamp(48px, 7vw, 76px);
+            line-height: 1.1;
+            margin-bottom: 20px;
+
+        }
+
+        .hero-content h1 span {
+
+            color: var(--yellow);
+
+        }
+
+        .hero-content p {
+
+            max-width: 700px;
+            margin: auto;
+            color: rgba(255,255,255,0.90);
+            font-size: 17px;
+
+        }
+
+
+        /* =========================
+           SERVICES INTRO
+        ========================== */
+
+        .services-intro {
+
+            padding: 100px 0 70px;
+            background: white;
+
+        }
+
+        .section-heading {
+
+            text-align: center;
+            max-width: 750px;
+            margin: auto;
+
+        }
+
+        .eyebrow {
+
+            color: var(--blue);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+
+        }
+
+        .section-heading h2 {
+
+            font-family: "Playfair Display", serif;
+            font-size: 46px;
+            color: var(--dark);
+            line-height: 1.2;
+            margin-bottom: 18px;
+
+        }
+
+        .section-heading p {
+
+            color: var(--gray);
+            font-size: 15px;
+
+        }
+
+
+        /* =========================
+           COLOR STRIP
+        ========================== */
+
+        .color-strip {
+
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            margin-top: 60px;
+
+        }
+
+        .color-box {
+
+            height: 8px;
+
+        }
+
+        .color-blue {
+            background: var(--blue);
+        }
+
+        .color-yellow {
+            background: var(--yellow);
+        }
+
+        .color-orange {
+            background: var(--orange);
+        }
+
+        .color-green {
+            background: var(--green);
+        }
+
+
+        /* =========================
+           SERVICES GRID
+        ========================== */
+
+        .services-section {
+
+            padding: 40px 0 100px;
+            background: white;
+
+        }
+
+        .services-grid {
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+
+        }
+
+        .service-card {
+
+            position: relative;
+            background: white;
+            padding: 35px;
+            border-radius: 22px;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.07);
+            border-top: 5px solid var(--blue);
+            transition: 0.3s;
+            overflow: hidden;
+
+        }
+
+        .service-card:hover {
+
+            transform: translateY(-8px);
+            box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+
+        }
+
+        .service-card:nth-child(2) {
+            border-top-color: var(--yellow);
+        }
+
+        .service-card:nth-child(3) {
+            border-top-color: var(--orange);
+        }
+
+        .service-card:nth-child(4) {
+            border-top-color: var(--green);
+        }
+
+        .service-card:nth-child(5) {
+            border-top-color: var(--blue);
+        }
+
+        .service-card:nth-child(6) {
+            border-top-color: var(--yellow);
+        }
+
+        .service-icon {
+
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background: var(--light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            margin-bottom: 22px;
+
+        }
+
+        .service-card h3 {
+
+            color: var(--dark);
+            font-size: 20px;
+            margin-bottom: 12px;
+
+        }
+
+        .service-card p {
+
+            color: var(--gray);
+            font-size: 14px;
+            margin-bottom: 18px;
+
+        }
+
+        .service-number {
+
+            position: absolute;
+            right: 20px;
+            top: 18px;
+            font-size: 12px;
+            font-weight: 800;
+            color: #dceaf1;
+            letter-spacing: 1px;
+
+        }
+
+
+        /* =========================
+           SERVICE PROMISE
+        ========================== */
+
+        .service-promise {
+
+            padding: 90px 0;
+            background: var(--light);
+
+        }
+
+        .promise-grid {
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+
+        }
+
+        .promise-content h2 {
+
+            font-family: "Playfair Display", serif;
+            font-size: 44px;
+            color: var(--dark);
+            line-height: 1.2;
+            margin-bottom: 20px;
+
+        }
+
+        .promise-content p {
+
+            color: var(--gray);
+            font-size: 15px;
+            margin-bottom: 18px;
+
+        }
+
+        .promise-list {
+
+            display: grid;
+            gap: 14px;
+            margin-top: 25px;
+
+        }
+
+        .promise-item {
+
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--dark);
+            font-size: 14px;
+            font-weight: 600;
+
+        }
+
+        .check {
+
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--yellow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+
+        }
+
+
+        /* =========================
+           PROMISE VISUAL
+        ========================== */
+
+        .promise-visual {
+
+            min-height: 360px;
+            border-radius: 28px;
+            padding: 45px;
+            position: relative;
+            overflow: hidden;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    var(--blue-dark),
+                    var(--blue)
+                );
+
+            color: white;
+
+        }
+
+        .promise-visual::before {
+
+            content: "";
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            background: rgba(255,201,40,0.13);
+            right: -90px;
+            top: -80px;
+
+        }
+
+        .promise-visual::after {
+
+            content: "";
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: rgba(57,185,232,0.15);
+            left: -80px;
+            bottom: -80px;
+
+        }
+
+        .promise-inner {
+
+            position: relative;
+            z-index: 2;
+
+        }
+
+        .promise-icon {
+
+            width: 70px;
+            height: 70px;
+            background: var(--yellow);
+            color: var(--dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 34px;
+            margin-bottom: 25px;
+
+        }
+
+        .promise-visual h3 {
+
+            font-family: "Playfair Display", serif;
+            font-size: 34px;
+            margin-bottom: 15px;
+
+        }
+
+        .promise-visual p {
+
+            color: rgba(255,255,255,0.82);
+            font-size: 14px;
+            max-width: 450px;
+
+        }
+
+
+        /* =========================
+           WHO WE SERVE
+        ========================== */
+
+        .customers {
+
+            padding: 90px 0;
+            background: white;
+
+        }
+
+        .customer-grid {
+
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 18px;
+            margin-top: 50px;
+
+        }
+
+        .customer {
+
+            text-align: center;
+            padding: 25px 15px;
+            background: var(--light);
+            border-radius: 18px;
+            transition: 0.3s;
+
+        }
+
+        .customer:hover {
+
+            transform: translateY(-5px);
+
+        }
+
+        .customer-icon {
+
+            font-size: 30px;
+            margin-bottom: 10px;
+
+        }
+
+        .customer h3 {
+
+            color: var(--dark);
+            font-size: 14px;
+
+        }
+
+
+        /* =========================
+           CTA
+        ========================== */
+
+        .cta {
+
+            padding: 90px 0;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    var(--blue-dark),
+                    var(--blue)
+                );
+
+            color: white;
+            text-align: center;
+
+        }
+
+        .cta h2 {
+
+            font-family: "Playfair Display", serif;
+            font-size: 48px;
+            margin-bottom: 15px;
+
+        }
+
+        .cta p {
+
+            max-width: 650px;
+            margin: 0 auto 30px;
+            color: rgba(255,255,255,0.85);
+
+        }
+
+        .btn {
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 27px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 700;
+            transition: 0.3s;
+
+        }
+
+        .btn-yellow {
+
+            background: var(--yellow);
+            color: var(--dark);
+
+        }
+
+        .btn-yellow:hover {
+
+            background: white;
+            transform: translateY(-3px);
+
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+
+            background: var(--dark);
+            color: white;
+            padding: 50px 0 25px;
+
+        }
+
+        .footer-content {
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+
+        }
+
+        .footer-logo {
+
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+        }
+
+        .footer-logo .logo-circle {
+
+            width: 55px;
+            height: 55px;
+
+        }
+
+        .footer-logo strong {
+
+            display: block;
+            font-size: 17px;
+
+        }
+
+        .footer-logo span {
+
+            color: var(--yellow);
+            font-size: 9px;
+            letter-spacing: 1.5px;
+
+        }
+
+        .footer-contact {
+
+            text-align: right;
+            color: rgba(255,255,255,0.7);
+            font-size: 13px;
+
+        }
+
+        .copyright {
+
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 40px;
+            padding-top: 20px;
+            color: rgba(255,255,255,0.45);
+            font-size: 12px;
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 1000px) {
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .customer-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .promise-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            header {
+                padding: 14px 0;
+            }
+
+            .logo-text {
+                display: none;
+            }
+
+            .logo-circle {
+                width: 60px;
+                height: 60px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .page-hero {
+                min-height: 550px;
+            }
+
+            .hero-content {
+                padding-top: 90px;
+            }
+
+            .hero-content h1 {
+                font-size: 48px;
+            }
+
+            .services-intro,
+            .services-section,
+            .service-promise,
+            .customers {
+                padding-top: 70px;
+                padding-bottom: 70px;
+            }
+
+            .section-heading h2 {
+                font-size: 38px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .customer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .promise-content h2 {
+                font-size: 38px;
+            }
+
+            .promise-visual {
+                padding: 35px 25px;
+            }
+
+            .cta {
+                padding: 70px 0;
+            }
+
+            .cta h2 {
+                font-size: 38px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-contact {
+                text-align: left;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+
+        <div class="container navbar">
+
+
+            <!-- LOGO -->
+
+            <a href="index.html" class="logo">
+
+                <div class="logo-circle">
+
+                    <img src="images/logo.png"
+                         alt="Centispin Travel Agency Logo">
+
+                </div>
+
+                <div class="logo-text">
+
+                    <strong>
+                        CENTISPIN
+                    </strong>
+
+                    <span>
+                        TRAVEL AGENCY
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="nav-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="services.html"
+                   class="active">
+                    Services
+                </a>
+
+                <a href="destinations.html">
+                    Destinations
+                </a>
+
+                <a href="why-us.html">
+                    Why Us
+                </a>
+
+                <a href="contact.html"
+                   class="contact-button">
+                    Contact
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="page-hero">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <div class="hero-label">
+                    OUR SERVICES
+                </div>
+
+                <h1>
+
+                    Travel made
+                    <span>simpler.</span>
+
+                </h1>
+
+                <p>
+
+                    From flight booking support to travel
+                    planning and customer care, Centispin
+                    is building services designed to make
+                    your journey easier.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         SERVICES INTRO
+    ========================== -->
+
+    <section class="services-intro">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">
+                    WHAT WE OFFER
+                </p>
+
+                <h2>
+                    Travel support built around you.
+                </h2>
+
+                <p>
+
+                    Our planned services are focused on
+                    providing professional guidance,
+                    responsive support and practical
+                    travel solutions for individuals,
+                    families, groups and organizations.
+
+                </p>
+
+            </div>
+
+
+            <div class="color-strip">
+
+                <div class="color-box color-blue"></div>
+
+                <div class="color-box color-yellow"></div>
+
+                <div class="color-box color-orange"></div>
+
+                <div class="color-box color-green"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         SERVICE CARDS
+    ========================== -->
+
+    <section class="services-section">
+
+        <div class="container">
+
+            <div class="services-grid">
+
+
+                <!-- SERVICE 1 -->
+
+                <div class="service-card">
+
+                    <div class="service-number">
+                        01
+                    </div>
+
+                    <div class="service-icon">
+                        ✈️
+                    </div>
+
+                    <h3>
+                        Domestic Flight Booking
+                    </h3>
+
+                    <p>
+
+                        Flight booking support for travel
+                        within Papua New Guinea, helping
+                        customers plan their domestic
+                        journeys.
+
+                    </p>
+
+                </div>
+
+
+                <!-- SERVICE 2 -->
+
+                <div class="service-card">
+
+                    <div class="service-number">
+                        02
+                    </div>
+
+                    <div class="service-icon">
+                        🌏
+                    </div>
+
+                    <h3>
+                        International Flight Booking
+                    </h3>
+
+                    <p>
+
+                        International flight booking support
+                        for customers travelling from Papua
+                        New Guinea to destinations around
+                        the world.
+
+                    </p>
+
+                </div>
+
+
+                <!-- SERVICE 3 -->
+
+                <div class="service-card">
+
+                    <div class="service-number">
+                        03
+                    </div>
+
+                    <div class="service-icon">
+                        🗺️
+                    </div>
+
+                    <h3>
+                        Travel Consultation
+                    </h3>
+
+                    <p>
+
+                        Professional travel guidance and
+                        itinerary planning to help customers
+                        organize their travel requirements.
+
+                    </p>
+
+                </div>
+
+
+                <!-- SERVICE 4 -->
+
+                <div class="service-card">
+
+                    <div class="service-number">
+                        04
+                    </div>
+
+                    <div class="service-icon">
+                        👨‍👩‍👧‍👦
+                    </div>
+
+                    <h3>
+                        Leisure & Group Travel
+                    </h3>
+
+                    <p>
+
+                        Support for leisure, family and group
+                        travel arrangements, helping make
+                        shared journeys easier to organize.
+
+                    </p>
+
+                </div>
+
+
+                <!-- SERVICE 5 -->
+
+                <div class="service-card">
+
+                    <div class="service-number">
+                        05
+                    </div>
+
+                    <div class="service-icon">
+                        💼
+                    </div>
+
+                    <h3>
+                        Corporate Travel
+                    </h3>
+
+                    <p>
+
+                        Travel assistance for businesses and
+                        organizations requiring professional
+                        support for business travel.
+
+                    </p>
+
+                </div>
+
+
+                <!-- SERVICE 6 -->
+
+                <div class="service-card">
+
+                    <div class="service-number">
+                        06
+                    </div>
+
+                    <div class="service-icon">
+                        📄
+                    </div>
+
+                    <h3>
+                        Travel Documentation Guidance
+                    </h3>
+
+                    <p>
+
+                        Guidance to help travellers understand
+                        their travel documentation requirements
+                        and prepare for their journey.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         SERVICE PROMISE
+    ========================== -->
+
+    <section class="service-promise">
+
+        <div class="container">
+
+            <div class="promise-grid">
+
+
+                <div class="promise-content">
+
+                    <p class="eyebrow">
+                        OUR APPROACH
+                    </p>
+
+                    <h2>
+                        More than booking a ticket.
+                    </h2>
+
+                    <p>
+
+                        At Centispin, our goal is to simplify
+                        the travel process by combining
+                        professional guidance with responsive
+                        customer support.
+
+                    </p>
+
+                    <p>
+
+                        We want customers to feel informed,
+                        supported and confident as they
+                        prepare for their journey.
+
+                    </p>
+
+
+                    <div class="promise-list">
+
+                        <div class="promise-item">
+
+                            <div class="check">
+                                ✓
+                            </div>
+
+                            Professional guidance
+
+                        </div>
+
+
+                        <div class="promise-item">
+
+                            <div class="check">
+                                ✓
+                            </div>
+
+                            Clear communication
+
+                        </div>
+
+
+                        <div class="promise-item">
+
+                            <div class="check">
+                                ✓
+                            </div>
+
+                            Transparent travel support
+
+                        </div>
+
+
+                        <div class="promise-item">
+
+                            <div class="check">
+                                ✓
+                            </div>
+
+                            Responsive customer care
+
+                        </div>
+
+
+                        <div class="promise-item">
+
+                            <div class="check">
+                                ✓
+                            </div>
+
+                            After-sales support
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="promise-visual">
+
+                    <div class="promise-inner">
+
+                        <div class="promise-icon">
+                            💛
+                        </div>
+
+                        <h3>
+                            Your journey matters.
+                        </h3>
+
+                        <p>
+
+                            We are building Centispin around
+                            a simple idea: travel should be
+                            easier to understand, easier to
+                            organize and supported by people
+                            who care.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         WHO WE SERVE
+    ========================== -->
+
+    <section class="customers">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">
+                    WHO WE SERVE
+                </p>
+
+                <h2>
+                    Travel support for different journeys.
+                </h2>
+
+                <p>
+
+                    Our services are designed with a range
+                    of travellers and organizations in mind.
+
+                </p>
+
+            </div>
+
+
+            <div class="customer-grid">
+
+
+                <div class="customer">
+
+                    <div class="customer-icon">
+                        🧳
+                    </div>
+
+                    <h3>
+                        Individual Travellers
+                    </h3>
+
+                </div>
+
+
+                <div class="customer">
+
+                    <div class="customer-icon">
+                        👨‍👩‍👧‍👦
+                    </div>
+
+                    <h3>
+                        Families
+                    </h3>
+
+                </div>
+
+
+                <div class="customer">
+
+                    <div class="customer-icon">
+                        🎓
+                    </div>
+
+                    <h3>
+                        Students & Visitors
+                    </h3>
+
+                </div>
+
+
+                <div class="customer">
+
+                    <div class="customer-icon">
+                        🤝
+                    </div>
+
+                    <h3>
+                        Church & Community Groups
+                    </h3>
+
+                </div>
+
+
+                <div class="customer">
+
+                    <div class="customer-icon">
+                        🏢
+                    </div>
+
+                    <h3>
+                        Corporate Organizations
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CTA
+    ========================== -->
+
+    <section class="cta">
+
+        <div class="container">
+
+            <p class="eyebrow"
+               style="color:#ffc928;">
+
+                PLAN YOUR JOURNEY
+
+            </p>
+
+            <h2>
+                Ready to start travelling?
+            </h2>
+
+            <p>
+
+                Talk to Centispin Travel Agency about
+                your travel plans and let us help you
+                find the right way forward.
+
+            </p>
+
+            <a href="contact.html"
+               class="btn btn-yellow">
+
+                Contact Centispin
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="container footer-content">
+
+
+            <div class="footer-logo">
+
+                <div class="logo-circle">
+
+                    <img src="images/logo.png"
+                         alt="Centispin Travel Agency Logo">
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        CENTISPIN
+                    </strong>
+
+                    <span>
+                        TRAVEL AGENCY
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <div>
+                    📞 +675 78391486
+                </div>
+
+                <div>
+                    📞 +675 83301312
+                </div>
+
+                <div>
+                    ✉ centispinta@gmail.com
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="container copyright">
+
+            © <span id="year"></span>
+            Centispin Travel Agency.
+            All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+    </script>
+
+
+</body>
+</html>
