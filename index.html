@@ -1,32 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
 
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Centispin Travel Agency - reliable travel solutions across Papua New Guinea and international destinations.">
+          content="Welcome to Centispin Travel Agency - your trusted travel connection from Papua New Guinea to the world.">
 
-    <meta name="author"
-          content="Centispin Travel Agency">
+    <title>Centispin Travel Agency | Welcome</title>
 
-    <title>Centispin Travel Agency | Home</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- =========================
+         GOOGLE FONTS
+    ========================== -->
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
           rel="stylesheet">
 
 
+    <!-- =========================
+         CSS
+    ========================== -->
+
     <style>
 
-        /* =====================================================
+        /* =====================================
            RESET
-        ===================================================== */
+        ====================================== */
 
         * {
             margin: 0;
@@ -34,704 +44,1081 @@
             box-sizing: border-box;
         }
 
+
         html {
             scroll-behavior: smooth;
         }
 
+
         body {
             font-family: "Montserrat", sans-serif;
             background: #ffffff;
-            color: #172033;
+            color: #162536;
             line-height: 1.7;
         }
 
-        img {
-            max-width: 100%;
-        }
 
         a {
             text-decoration: none;
             color: inherit;
         }
 
-        ul {
-            list-style: none;
-        }
 
-        button {
-            font-family: inherit;
-        }
-
-
-        /* =====================================================
-           COLORS
-        ===================================================== */
-
-        :root {
-            --primary: #075985;
-            --primary-dark: #063b58;
-            --secondary: #f4b400;
-            --dark: #061d2b;
-            --text: #172033;
-            --muted: #687582;
-            --light: #f5f8fa;
-            --white: #ffffff;
-            --border: #e3e8ec;
-            --shadow: 0 15px 40px rgba(0,0,0,0.08);
-        }
-
-
-        /* =====================================================
-           CONTAINER
-        ===================================================== */
-
-        .container {
-            width: min(1180px, 92%);
-            margin: auto;
-        }
-
-
-        /* =====================================================
-           HEADER
-        ===================================================== */
-
-        .site-header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(255,255,255,0.97);
-            border-bottom: 1px solid var(--border);
-            backdrop-filter: blur(10px);
-        }
-
-        .navbar {
-            min-height: 85px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 30px;
-        }
-
-
-        /* =====================================================
-           LOGO
-        ===================================================== */
-
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-
-        .logo img {
-            width: 175px;
-            height: auto;
+        img {
+            max-width: 100%;
             display: block;
         }
 
 
-        /* =====================================================
+        /* =====================================
+           COLORS
+        ====================================== */
+
+        :root {
+
+            --blue: #0876b9;
+
+            --blue-dark: #064c78;
+
+            --sky: #39b9e8;
+
+            --yellow: #ffc928;
+
+            --orange: #f7941d;
+
+            --green: #1c9c73;
+
+            --dark: #092536;
+
+            --light: #f3faff;
+
+            --white: #ffffff;
+
+            --gray: #657582;
+
+        }
+
+
+        /* =====================================
+           CONTAINER
+        ====================================== */
+
+        .container {
+
+            width: 92%;
+
+            max-width: 1180px;
+
+            margin: auto;
+
+        }
+
+
+        /* =====================================
+           HEADER
+        ====================================== */
+
+        header {
+
+            position: absolute;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            z-index: 100;
+
+            padding: 20px 0;
+
+        }
+
+
+        .navbar {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+        }
+
+
+        /* =====================================
+           CIRCULAR LOGO
+        ====================================== */
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 14px;
+
+        }
+
+
+        .logo-circle {
+
+            width: 68px;
+
+            height: 68px;
+
+            border-radius: 50%;
+
+            background: #ffffff;
+
+            padding: 5px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.20);
+
+            border: 3px solid var(--yellow);
+
+        }
+
+
+        .logo-circle img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: contain;
+
+            border-radius: 50%;
+
+        }
+
+
+        .logo-text {
+
+            color: white;
+
+            line-height: 1.1;
+
+        }
+
+
+        .logo-text strong {
+
+            display: block;
+
+            font-size: 20px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+
+        }
+
+
+        .logo-text span {
+
+            font-size: 10px;
+
+            letter-spacing: 2px;
+
+            font-weight: 600;
+
+            color: var(--yellow);
+
+        }
+
+
+        /* =====================================
            NAVIGATION
-        ===================================================== */
+        ====================================== */
 
         .nav-links {
+
             display: flex;
+
             align-items: center;
-            gap: 30px;
+
+            gap: 28px;
+
         }
+
 
         .nav-links a {
-            position: relative;
-            font-size: 14px;
+
+            color: white;
+
+            font-size: 13px;
+
             font-weight: 600;
-            color: var(--text);
-            transition: 0.3s ease;
+
+            transition: 0.3s;
+
         }
+
 
         .nav-links a:hover {
-            color: var(--primary);
-        }
 
-        .nav-links a.active {
-            color: var(--primary);
-        }
+            color: var(--yellow);
 
-        .nav-links a.active::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -9px;
-            width: 100%;
-            height: 2px;
-            background: var(--secondary);
-        }
-
-        .nav-cta {
-            background: var(--primary);
-            color: white !important;
-            padding: 12px 22px;
-            border-radius: 4px;
-        }
-
-        .nav-cta:hover {
-            background: var(--primary-dark);
         }
 
 
-        /* =====================================================
-           MOBILE MENU
-        ===================================================== */
+        .contact-button {
 
-        .menu-toggle {
-            display: none;
-            border: none;
-            background: transparent;
-            color: var(--dark);
-            font-size: 28px;
-            cursor: pointer;
+            background: var(--yellow);
+
+            color: var(--dark) !important;
+
+            padding: 11px 20px;
+
+            border-radius: 30px;
+
         }
 
 
-        /* =====================================================
+        .contact-button:hover {
+
+            background: white;
+
+            transform: translateY(-2px);
+
+        }
+
+
+        /* =====================================
            HERO
-        ===================================================== */
+        ====================================== */
 
         .hero {
-            min-height: 680px;
+
+            min-height: 760px;
+
             position: relative;
+
             display: flex;
+
             align-items: center;
+
+            overflow: hidden;
 
             background:
+
                 linear-gradient(
-                    rgba(4,25,40,0.70),
-                    rgba(4,25,40,0.78)
+                    120deg,
+                    rgba(4,57,91,0.92),
+                    rgba(7,118,185,0.72),
+                    rgba(25,164,194,0.58)
                 ),
+
                 url("images/hero.jpg")
                 center/cover no-repeat;
+
         }
+
+
+        /* Decorative circles */
+
+        .hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 500px;
+
+            height: 500px;
+
+            border-radius: 50%;
+
+            background: rgba(255,201,40,0.12);
+
+            right: -150px;
+
+            top: -150px;
+
+        }
+
+
+        .hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 350px;
+
+            height: 350px;
+
+            border-radius: 50%;
+
+            background: rgba(57,185,232,0.15);
+
+            left: -120px;
+
+            bottom: -120px;
+
+        }
+
 
         .hero-content {
+
             position: relative;
+
             z-index: 2;
-            max-width: 780px;
+
             color: white;
-            padding: 100px 0;
+
+            max-width: 850px;
+
+            padding-top: 80px;
+
         }
 
-        .eyebrow {
-            color: var(--secondary);
-            font-size: 13px;
-            font-weight: 800;
+
+        .welcome {
+
+            display: inline-block;
+
+            background: rgba(255,255,255,0.15);
+
+            border: 1px solid rgba(255,255,255,0.3);
+
+            padding: 8px 18px;
+
+            border-radius: 30px;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
             letter-spacing: 2px;
-            margin-bottom: 15px;
+
+            margin-bottom: 22px;
+
+            color: var(--yellow);
+
         }
+
 
         .hero h1 {
+
             font-family: "Playfair Display", serif;
-            font-size: clamp(45px, 7vw, 76px);
-            line-height: 1.08;
+
+            font-size: clamp(48px, 7vw, 82px);
+
+            line-height: 1.05;
+
             margin-bottom: 25px;
+
         }
+
 
         .hero h1 span {
-            color: var(--secondary);
+
+            color: var(--yellow);
+
         }
 
-        .hero-description {
+
+        .hero p {
+
             max-width: 680px;
+
             font-size: 18px;
-            color: rgba(255,255,255,0.90);
+
+            color: rgba(255,255,255,0.92);
+
             margin-bottom: 35px;
+
         }
 
-        .hero-actions {
+
+        /* =====================================
+           HERO BUTTONS
+        ====================================== */
+
+        .hero-buttons {
+
             display: flex;
+
             flex-wrap: wrap;
+
             gap: 15px;
+
         }
 
-
-        /* =====================================================
-           BUTTONS
-        ===================================================== */
 
         .btn {
+
             display: inline-flex;
+
             align-items: center;
+
             justify-content: center;
-            min-height: 50px;
-            padding: 0 26px;
-            border-radius: 4px;
+
+            padding: 14px 27px;
+
+            border-radius: 30px;
+
             font-size: 14px;
+
             font-weight: 700;
-            transition: 0.3s ease;
+
+            transition: 0.3s;
+
         }
 
-        .btn-primary {
-            background: var(--primary);
-            color: white;
+
+        .btn-yellow {
+
+            background: var(--yellow);
+
+            color: var(--dark);
+
         }
 
-        .btn-primary:hover {
-            background: var(--primary-dark);
-            transform: translateY(-2px);
-        }
 
-        .btn-light {
+        .btn-yellow:hover {
+
             background: white;
-            color: var(--dark);
-        }
 
-        .btn-light:hover {
-            background: var(--secondary);
-        }
+            transform: translateY(-3px);
 
-
-        /* =====================================================
-           GENERAL SECTIONS
-        ===================================================== */
-
-        .section {
-            padding: 100px 0;
         }
 
 
-        /* =====================================================
-           INTRO
-        ===================================================== */
+        .btn-outline {
 
-        .two-col {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
+            border: 2px solid white;
+
+            color: white;
+
+        }
+
+
+        .btn-outline:hover {
+
+            background: white;
+
+            color: var(--blue);
+
+        }
+
+
+        /* =====================================
+           WELCOME CARD
+        ====================================== */
+
+        .welcome-card {
+
+            position: absolute;
+
+            right: 7%;
+
+            bottom: 90px;
+
+            width: 270px;
+
+            padding: 28px;
+
+            background: rgba(255,255,255,0.96);
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 20px 50px rgba(0,0,0,0.20);
+
+            z-index: 3;
+
+        }
+
+
+        .welcome-card-icon {
+
+            width: 55px;
+
+            height: 55px;
+
+            border-radius: 50%;
+
+            background: var(--yellow);
+
+            display: flex;
+
             align-items: center;
+
+            justify-content: center;
+
+            font-size: 25px;
+
+            margin-bottom: 15px;
+
         }
 
-        .intro h2,
-        .why-section h2 {
-            font-family: "Playfair Display", serif;
-            font-size: clamp(35px, 4vw, 52px);
-            line-height: 1.2;
+
+        .welcome-card h3 {
+
             color: var(--dark);
+
+            font-size: 18px;
+
+            margin-bottom: 8px;
+
         }
+
+
+        .welcome-card p {
+
+            color: var(--gray);
+
+            font-size: 13px;
+
+            margin: 0;
+
+        }
+
+
+        /* =====================================
+           INTRO SECTION
+        ====================================== */
+
+        .intro {
+
+            padding: 100px 0;
+
+            background: white;
+
+        }
+
+
+        .intro-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 80px;
+
+            align-items: center;
+
+        }
+
+
+        .eyebrow {
+
+            color: var(--blue);
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .intro h2 {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 48px;
+
+            line-height: 1.2;
+
+            color: var(--dark);
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .intro-text {
+
+            color: var(--gray);
+
+            font-size: 16px;
+
+        }
+
 
         .intro-text p {
-            color: var(--muted);
-            margin-bottom: 20px;
-        }
 
-        .text-link {
-            color: var(--primary);
-            font-weight: 700;
-        }
+            margin-bottom: 18px;
 
-        .text-link:hover {
-            color: var(--primary-dark);
         }
 
 
-        /* =====================================================
-           SERVICES
-        ===================================================== */
+        /* =====================================
+           COLOR STRIP
+        ====================================== */
 
-        .services {
-            background: var(--dark);
-            color: white;
-        }
+        .color-strip {
 
-        .section-heading {
-            max-width: 700px;
-            margin-bottom: 50px;
-        }
-
-        .section-heading h2 {
-            font-family: "Playfair Display", serif;
-            font-size: clamp(35px, 4vw, 52px);
-            line-height: 1.2;
-            margin-bottom: 15px;
-        }
-
-        .section-heading p:last-child {
-            color: rgba(255,255,255,0.7);
-        }
-
-        .cards {
             display: grid;
-            grid-template-columns: repeat(4,1fr);
-            gap: 20px;
-        }
 
-        .card {
-            background: #0c293a;
-            padding: 35px 28px;
-            border: 1px solid rgba(255,255,255,0.08);
-            transition: 0.3s ease;
-        }
+            grid-template-columns:
+                repeat(4,1fr);
 
-        .card:hover {
-            transform: translateY(-8px);
-            border-color: var(--secondary);
-        }
+            margin-top: 60px;
 
-        .icon {
-            width: 55px;
-            height: 55px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background: rgba(244,180,0,0.12);
-            color: var(--secondary);
-            font-size: 25px;
-            margin-bottom: 25px;
-        }
-
-        .card h3 {
-            font-size: 19px;
-            margin-bottom: 12px;
-        }
-
-        .card p {
-            color: rgba(255,255,255,0.65);
-            font-size: 14px;
-            margin-bottom: 22px;
-        }
-
-        .card a {
-            color: var(--secondary);
-            font-size: 13px;
-            font-weight: 700;
         }
 
 
-        /* =====================================================
-           WHY US
-        ===================================================== */
+        .color-box {
 
-        .why-section {
+            height: 8px;
+
+        }
+
+
+        .color-blue {
+            background: var(--blue);
+        }
+
+
+        .color-yellow {
+            background: var(--yellow);
+        }
+
+
+        .color-orange {
+            background: var(--orange);
+        }
+
+
+        .color-green {
+            background: var(--green);
+        }
+
+
+        /* =====================================
+           HIGHLIGHTS
+        ====================================== */
+
+        .highlights {
+
+            padding: 85px 0;
+
             background: var(--light);
-        }
 
-        .why-text {
-            color: var(--muted);
-            max-width: 520px;
-            margin: 25px 0 30px;
-        }
-
-        .feature-list {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .feature {
-            display: flex;
-            gap: 20px;
-            padding: 25px;
-            background: white;
-            border: 1px solid var(--border);
-        }
-
-        .feature-number {
-            color: var(--secondary);
-            font-weight: 800;
-        }
-
-        .feature h3 {
-            font-size: 18px;
-            margin-bottom: 5px;
-        }
-
-        .feature p {
-            font-size: 14px;
-            color: var(--muted);
         }
 
 
-        /* =====================================================
-           DESTINATIONS
-        ===================================================== */
+        .section-title {
 
-        .destinations {
-            background: white;
+            text-align: center;
+
+            max-width: 700px;
+
+            margin: 0 auto 50px;
+
         }
 
-        .destination-grid {
+
+        .section-title h2 {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 45px;
+
+            color: var(--dark);
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .section-title p {
+
+            color: var(--gray);
+
+        }
+
+
+        .highlight-grid {
+
             display: grid;
-            grid-template-columns: repeat(3,1fr);
+
+            grid-template-columns:
+                repeat(3,1fr);
+
             gap: 25px;
-        }
 
-        .destination {
-            min-height: 300px;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            align-items: flex-end;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .destination::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(
-                transparent,
-                rgba(0,0,0,0.8)
-            );
-        }
-
-        .destination-content {
-            position: relative;
-            z-index: 2;
-            color: white;
-            padding: 30px;
-        }
-
-        .destination-content h3 {
-            font-size: 25px;
-            margin-bottom: 5px;
         }
 
 
-        /* =====================================================
-           CTA
-        ===================================================== */
+        .highlight {
+
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 10px 30px rgba(0,0,0,0.06);
+
+            transition: 0.3s;
+
+            border-top: 5px solid var(--blue);
+
+        }
+
+
+        .highlight:nth-child(2) {
+
+            border-top-color: var(--yellow);
+
+        }
+
+
+        .highlight:nth-child(3) {
+
+            border-top-color: var(--green);
+
+        }
+
+
+        .highlight:hover {
+
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 18px 40px rgba(0,0,0,0.10);
+
+        }
+
+
+        .highlight-icon {
+
+            font-size: 35px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .highlight h3 {
+
+            color: var(--dark);
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .highlight p {
+
+            color: var(--gray);
+
+            font-size: 14px;
+
+        }
+
+
+        /* =====================================
+           CALL TO ACTION
+        ====================================== */
 
         .cta {
-            padding: 70px 0;
-        }
 
-        .cta-box {
-            background: var(--secondary);
-            padding: 55px 60px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 30px;
-        }
+            padding: 90px 0;
 
-        .cta-box .eyebrow {
-            color: var(--dark);
-        }
+            background:
 
-        .cta-box h2 {
-            font-family: "Playfair Display", serif;
-            font-size: 42px;
-            line-height: 1.2;
-            margin-bottom: 12px;
-        }
+                linear-gradient(
+                    120deg,
+                    var(--blue-dark),
+                    var(--blue)
+                );
 
-        .cta-box p {
-            max-width: 600px;
-        }
-
-        .cta-box .btn {
-            background: var(--dark);
             color: white;
-            flex-shrink: 0;
+
+            text-align: center;
+
         }
 
-        .cta-box .btn:hover {
-            background: var(--primary);
+
+        .cta h2 {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 48px;
+
+            margin-bottom: 15px;
+
         }
 
 
-        /* =====================================================
+        .cta p {
+
+            max-width: 650px;
+
+            margin: 0 auto 30px;
+
+            color: rgba(255,255,255,0.85);
+
+        }
+
+
+        /* =====================================
            FOOTER
-        ===================================================== */
+        ====================================== */
 
         footer {
-            background: #04131e;
+
+            background: var(--dark);
+
             color: white;
+
+            padding: 50px 0 25px;
+
         }
 
-        .footer-grid {
-            padding: 75px 0;
-            display: grid;
-            grid-template-columns: 2fr 1fr 1.5fr;
-            gap: 70px;
-        }
 
-        .footer-logo img {
-            width: 180px;
-        }
+        .footer-content {
 
-        .footer-company p {
-            max-width: 350px;
-            color: rgba(255,255,255,0.6);
-            margin-top: 20px;
-        }
-
-        .footer-column {
             display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 10px;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 30px;
+
         }
 
-        .footer-column h4 {
-            color: var(--secondary);
-            margin-bottom: 10px;
+
+        .footer-logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
         }
 
-        .footer-column a,
-        .footer-column p {
-            color: rgba(255,255,255,0.65);
-            font-size: 14px;
+
+        .footer-logo .logo-circle {
+
+            width: 55px;
+
+            height: 55px;
+
         }
 
-        .footer-column a:hover {
-            color: var(--secondary);
+
+        .footer-logo strong {
+
+            display: block;
+
+            font-size: 17px;
+
         }
+
+
+        .footer-logo span {
+
+            color: var(--yellow);
+
+            font-size: 9px;
+
+            letter-spacing: 1.5px;
+
+        }
+
+
+        .footer-contact {
+
+            text-align: right;
+
+            color: rgba(255,255,255,0.7);
+
+            font-size: 13px;
+
+        }
+
 
         .copyright {
-            border-top: 1px solid rgba(255,255,255,0.08);
-            padding: 20px 0;
-            font-size: 12px;
+
+            text-align: center;
+
+            border-top: 1px solid rgba(255,255,255,0.1);
+
+            margin-top: 40px;
+
+            padding-top: 20px;
+
             color: rgba(255,255,255,0.45);
+
+            font-size: 12px;
+
         }
 
 
-        /* =====================================================
-           RESPONSIVE
-        ===================================================== */
+        /* =====================================
+           MOBILE
+        ====================================== */
 
-        @media (max-width: 1000px) {
-
-            .cards {
-                grid-template-columns: repeat(2,1fr);
-            }
+        @media (max-width: 900px) {
 
             .nav-links {
-                gap: 18px;
+
+                gap: 15px;
+
+            }
+
+
+            .welcome-card {
+
+                display: none;
+
+            }
+
+
+            .intro-grid {
+
+                grid-template-columns: 1fr;
+
+                gap: 35px;
+
+            }
+
+
+            .highlight-grid {
+
+                grid-template-columns: 1fr;
+
             }
 
         }
 
 
-        @media (max-width: 800px) {
+        @media (max-width: 700px) {
 
-            .menu-toggle {
-                display: block;
+            header {
+
+                padding: 14px 0;
+
             }
 
-            .nav-links {
-                position: absolute;
-                top: 85px;
-                left: 0;
-                right: 0;
-                background: white;
-                border-bottom: 1px solid var(--border);
-                padding: 20px 5%;
-                display: none;
-                flex-direction: column;
-                align-items: stretch;
-                gap: 0;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .nav-links li {
-                border-bottom: 1px solid var(--border);
-            }
-
-            .nav-links li:last-child {
-                border-bottom: none;
-                margin-top: 10px;
-            }
-
-            .nav-links a {
-                display: block;
-                padding: 13px 0;
-            }
-
-            .nav-links a.active::after {
-                display: none;
-            }
-
-            .nav-cta {
-                text-align: center;
-            }
-
-            .two-col {
-                grid-template-columns: 1fr;
-                gap: 45px;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 45px;
-            }
-
-            .footer-company {
-                grid-column: 1 / -1;
-            }
-
-            .cta-box {
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 40px;
-            }
-
-            .destination-grid {
-                grid-template-columns: 1fr;
-            }
-
-        }
-
-
-        @media (max-width: 600px) {
 
             .navbar {
-                min-height: 75px;
+
+                align-items: center;
+
             }
 
-            .logo img {
-                width: 145px;
+
+            .logo-text {
+
+                display: none;
+
             }
+
+
+            .logo-circle {
+
+                width: 60px;
+
+                height: 60px;
+
+            }
+
+
+            .nav-links {
+
+                display: none;
+
+            }
+
 
             .hero {
-                min-height: 600px;
+
+                min-height: 720px;
+
             }
+
 
             .hero-content {
-                padding: 70px 0;
+
+                padding-top: 100px;
+
             }
+
 
             .hero h1 {
-                font-size: 43px;
+
+                font-size: 48px;
+
             }
 
-            .hero-description {
+
+            .hero p {
+
                 font-size: 16px;
+
             }
 
-            .section {
+
+            .intro {
+
                 padding: 70px 0;
+
             }
 
-            .cards {
-                grid-template-columns: 1fr;
+
+            .intro h2 {
+
+                font-size: 38px;
+
             }
 
-            .footer-grid {
-                grid-template-columns: 1fr;
+
+            .section-title h2 {
+
+                font-size: 38px;
+
             }
 
-            .footer-company {
-                grid-column: auto;
+
+            .cta {
+
+                padding: 70px 0;
+
             }
 
-            .cta-box {
-                padding: 35px 25px;
+
+            .cta h2 {
+
+                font-size: 38px;
+
             }
 
-            .cta-box h2 {
-                font-size: 34px;
+
+            .footer-content {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+            }
+
+
+            .footer-contact {
+
+                text-align: left;
+
             }
 
         }
@@ -744,708 +1131,218 @@
 <body>
 
 
-    <!-- =====================================================
+    <!-- =========================================
          HEADER
-    ===================================================== -->
+    ========================================== -->
 
-    <header class="site-header">
+    <header>
 
-        <nav class="navbar container">
+        <div class="container navbar">
 
-            <!-- LOGO -->
-            <a href="#home" class="logo">
 
-                <img src="Logo SentiSpin.png"
-                     alt="Centispin Travel Agency Logo">
+            <!-- CIRCULAR LOGO -->
+
+            <a href="index.html" class="logo">
+
+                <div class="logo-circle">
+
+                    <img src="images/logo.png"
+                         alt="Centispin Travel Agency Logo">
+
+                </div>
+
+                <div class="logo-text">
+
+                    <strong>
+                        CENTISPIN
+                    </strong>
+
+                    <span>
+                        TRAVEL AGENCY
+                    </span>
+
+                </div>
 
             </a>
 
 
-            <!-- MOBILE MENU -->
-            <button class="menu-toggle"
-                    aria-label="Open navigation"
-                    aria-expanded="false">
-
-                ☰
-
-            </button>
-
-
             <!-- NAVIGATION -->
-            <ul class="nav-links">
 
-                <li>
-                    <a href="#home" class="active">
-                        Home
-                    </a>
-                </li>
+            <nav class="nav-links">
 
-                <li>
-                    <a href="#about">
-                        About
-                    </a>
-                </li>
+                <a href="index.html">
+                    Home
+                </a>
 
-                <li>
-                    <a href="#services">
-                        Services
-                    </a>
-                </li>
+                <a href="about.html">
+                    About
+                </a>
 
-                <li>
-                    <a href="#destinations">
-                        Destinations
-                    </a>
-                </li>
+                <a href="services.html">
+                    Services
+                </a>
 
-                <li>
-                    <a href="#why-us">
-                        Why Us
-                    </a>
-                </li>
+                <a href="destinations.html">
+                    Destinations
+                </a>
 
-                <li>
-                    <a href="#contact" class="nav-cta">
-                        Contact
-                    </a>
-                </li>
+                <a href="why-us.html">
+                    Why Us
+                </a>
 
-            </ul>
+                <a href="contact.html"
+                   class="contact-button">
 
-        </nav>
+                    Contact
+
+                </a>
+
+            </nav>
+
+        </div>
 
     </header>
 
 
 
-    <!-- =====================================================
-         MAIN
-    ===================================================== -->
+    <!-- =========================================
+         HERO / WELCOME
+    ========================================== -->
 
-    <main>
+    <section class="hero">
 
+        <div class="container">
 
-        <!-- =================================================
-             HERO
-        ================================================= -->
+            <div class="hero-content">
 
-        <section class="hero" id="home">
+                <div class="welcome">
 
-            <div class="container hero-content">
+                    WELCOME TO CENTISPIN
 
-                <p class="eyebrow">
-                    YOUR JOURNEY, OUR CARE
-                </p>
+                </div>
+
 
                 <h1>
-                    Travel made simple.
+
+                    Your journey
                     <br>
-                    <span>Connections made possible.</span>
+
+                    <span>starts here.</span>
+
                 </h1>
 
-                <p class="hero-description">
-
-                    Practical, responsive travel support
-                    for individuals, families, groups and
-                    businesses travelling across Papua New
-                    Guinea and beyond.
-
-                </p>
-
-                <div class="hero-actions">
-
-                    <a href="#services"
-                       class="btn btn-primary">
-
-                        Explore Services
-
-                    </a>
-
-                    <a href="#contact"
-                       class="btn btn-light">
-
-                        Talk to Us
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             ABOUT
-        ================================================= -->
-
-        <section class="section intro" id="about">
-
-            <div class="container two-col">
-
-                <div>
-
-                    <p class="eyebrow">
-                        WELCOME TO CENTISPIN
-                    </p>
-
-                    <h2>
-                        Reliable travel support,
-                        from planning to arrival.
-                    </h2>
-
-                </div>
-
-
-                <div class="intro-text">
-
-                    <p>
-
-                        Centispin Travel Agency is a
-                        100% Papua New Guinean-owned and
-                        operated travel enterprise focused
-                        on dependable, customer-focused
-                        travel management.
-
-                    </p>
-
-                    <p>
-
-                        Our goal is to simplify travel
-                        logistics through clear communication,
-                        professional guidance, transparent
-                        pricing and responsive support.
-
-                    </p>
-
-                    <a href="#services"
-                       class="text-link">
-
-                        Learn more about our services →
-                        
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             SERVICES
-        ================================================= -->
-
-        <section class="section services"
-                 id="services">
-
-            <div class="container">
-
-                <div class="section-heading">
-
-                    <p class="eyebrow">
-                        WHAT WE DO
-                    </p>
-
-                    <h2>
-                        Travel services built around you.
-                    </h2>
-
-                    <p>
-
-                        Professional travel support designed
-                        to make your journey easier.
-
-                    </p>
-
-                </div>
-
-
-                <div class="cards">
-
-
-                    <!-- FLIGHT BOOKINGS -->
-
-                    <article class="card">
-
-                        <div class="icon">
-                            ✈
-                        </div>
-
-                        <h3>
-                            Flight Bookings
-                        </h3>
-
-                        <p>
-
-                            Domestic and international
-                            flight booking support, routing
-                            and connections.
-
-                        </p>
-
-                        <a href="#contact">
-                            Enquire →
-                        </a>
-
-                    </article>
-
-
-
-                    <!-- ITINERARY -->
-
-                    <article class="card">
-
-                        <div class="icon">
-                            ◎
-                        </div>
-
-                        <h3>
-                            Itinerary Planning
-                        </h3>
-
-                        <p>
-
-                            Personalized travel schedules
-                            designed around your destination,
-                            timing and requirements.
-
-                        </p>
-
-                        <a href="#contact">
-                            Enquire →
-                        </a>
-
-                    </article>
-
-
-
-                    <!-- CORPORATE -->
-
-                    <article class="card">
-
-                        <div class="icon">
-                            ▣
-                        </div>
-
-                        <h3>
-                            Corporate Travel
-                        </h3>
-
-                        <p>
-
-                            Structured travel coordination
-                            for companies, organizations
-                            and business travellers.
-
-                        </p>
-
-                        <a href="#contact">
-                            Enquire →
-                        </a>
-
-                    </article>
-
-
-
-                    <!-- AFTER SALES -->
-
-                    <article class="card">
-
-                        <div class="icon">
-                            ↗
-                        </div>
-
-                        <h3>
-                            After-Sales Support
-                        </h3>
-
-                        <p>
-
-                            Responsive follow-up, disruption
-                            assistance, re-booking support
-                            and client communication.
-
-                        </p>
-
-                        <a href="#contact">
-                            Enquire →
-                        </a>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             DESTINATIONS
-        ================================================= -->
-
-        <section class="section destinations"
-                 id="destinations">
-
-            <div class="container">
-
-                <div class="section-heading">
-
-                    <p class="eyebrow">
-                        DESTINATIONS
-                    </p>
-
-                    <h2>
-                        From Papua New Guinea to the world.
-                    </h2>
-
-                    <p style="color:#687582;">
-
-                        Whether you are travelling locally
-                        or internationally, Centispin can
-                        help you organize your journey.
-
-                    </p>
-
-                </div>
-
-
-                <div class="destination-grid">
-
-
-                    <!-- PNG -->
-
-                    <div class="destination"
-                         style="background-image:
-                         url('images/png.jpg');">
-
-                        <div class="destination-content">
-
-                            <h3>
-                                Papua New Guinea
-                            </h3>
-
-                            <p>
-                                Domestic travel
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- INTERNATIONAL -->
-
-                    <div class="destination"
-                         style="background-image:
-                         url('images/international.jpg');">
-
-                        <div class="destination-content">
-
-                            <h3>
-                                International
-                            </h3>
-
-                            <p>
-                                Global connections
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- BUSINESS -->
-
-                    <div class="destination"
-                         style="background-image:
-                         url('images/business.jpg');">
-
-                        <div class="destination-content">
-
-                            <h3>
-                                Business Travel
-                            </h3>
-
-                            <p>
-                                Corporate journeys
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             WHY US
-        ================================================= -->
-
-        <section class="section why-section"
-                 id="why-us">
-
-            <div class="container two-col">
-
-
-                <div>
-
-                    <p class="eyebrow">
-                        WHY CENTISPIN
-                    </p>
-
-                    <h2>
-                        A travel partner focused
-                        on your journey.
-                    </h2>
-
-                    <p class="why-text">
-
-                        We believe travel should be clear,
-                        organized and supported from the
-                        beginning of your journey through
-                        to your arrival.
-
-                    </p>
-
-                    <a href="#contact"
-                       class="btn btn-primary">
-
-                        Talk to Us
-
-                    </a>
-
-                </div>
-
-
-
-                <div class="feature-list">
-
-
-                    <div class="feature">
-
-                        <div class="feature-number">
-                            01
-                        </div>
-
-                        <div>
-
-                            <h3>
-                                Professional Guidance
-                            </h3>
-
-                            <p>
-
-                                Practical assistance to help
-                                you understand and organize
-                                your travel arrangements.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div class="feature">
-
-                        <div class="feature-number">
-                            02
-                        </div>
-
-                        <div>
-
-                            <h3>
-                                Clear Communication
-                            </h3>
-
-                            <p>
-
-                                Straightforward communication
-                                throughout the travel process.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div class="feature">
-
-                        <div class="feature-number">
-                            03
-                        </div>
-
-                        <div>
-
-                            <h3>
-                                Responsive Support
-                            </h3>
-
-                            <p>
-
-                                Customer-focused support before,
-                                during and after your journey.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             CONTACT CTA
-        ================================================= -->
-
-        <section class="cta"
-                 id="contact">
-
-            <div class="container cta-box">
-
-                <div>
-
-                    <p class="eyebrow">
-                        READY TO TRAVEL?
-                    </p>
-
-                    <h2>
-                        Let's plan your next journey.
-                    </h2>
-
-                    <p>
-
-                        Tell us where you need to go and
-                        we'll help you work through the
-                        travel details.
-
-                    </p>
-
-                </div>
-
-
-                <a href="mailto:centispinta@gmail.com"
-                   class="btn">
-
-                    Email Us
-
-                </a>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-
-    <!-- =====================================================
-         FOOTER
-    ===================================================== -->
-
-    <footer>
-
-        <div class="container footer-grid">
-
-
-            <!-- COMPANY -->
-
-            <div class="footer-company">
-
-                <a href="#home"
-                   class="logo footer-logo">
-
-                    <img src="images/logo.png"
-                         alt="Centispin Travel Agency Logo">
-
-                </a>
 
                 <p>
 
-                    Reliable travel solutions from
-                    Papua New Guinea to the world.
+                    Discover a simpler way to travel.
+                    Centispin Travel Agency is here to
+                    connect you with destinations across
+                    Papua New Guinea and around the world.
 
                 </p>
 
-            </div>
+
+                <div class="hero-buttons">
+
+                    <a href="services.html"
+                       class="btn btn-yellow">
+
+                        Explore Our Services
+
+                    </a>
 
 
+                    <a href="contact.html"
+                       class="btn btn-outline">
 
-            <!-- PAGES -->
+                        Contact Us
 
-            <div class="footer-column">
+                    </a>
 
-                <h4>
-                    Pages
-                </h4>
-
-                <a href="#home">
-                    Home
-                </a>
-
-                <a href="#about">
-                    About
-                </a>
-
-                <a href="#services">
-                    Services
-                </a>
-
-                <a href="#destinations">
-                    Destinations
-                </a>
-
-                <a href="#why-us">
-                    Why Us
-                </a>
+                </div>
 
             </div>
 
+        </div>
 
 
-            <!-- CONTACT -->
+        <!-- WELCOME CARD -->
 
-            <div class="footer-column">
+        <div class="welcome-card">
 
-                <h4>
-                    Contact
-                </h4>
+            <div class="welcome-card-icon">
+                ✈
+            </div>
 
-                <a href="tel:+67578391486">
-                    +675 78391486
-                </a>
+            <h3>
+                Travel with confidence
+            </h3>
 
-                <a href="tel:+67583301312">
-                    +675 83301312
-                </a>
+            <p>
 
-                <a href="mailto:centispinta@gmail.com">
-                    centispinta@gmail.com
-                </a>
+                Professional travel support,
+                clear communication and customer
+                care from planning to arrival.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         INTRODUCTION
+    ========================================== -->
+
+    <section class="intro">
+
+        <div class="container intro-grid">
+
+
+            <div>
+
+                <p class="eyebrow">
+                    YOUR TRAVEL PARTNER
+                </p>
+
+                <h2>
+
+                    Connecting people
+                    with places.
+
+                </h2>
+
+            </div>
+
+
+            <div class="intro-text">
 
                 <p>
-                    Port Moresby, Papua New Guinea
+
+                    Welcome to Centispin Travel Agency,
+                    a 100% Papua New Guinean-owned and
+                    operated travel enterprise.
+
+                </p>
+
+                <p>
+
+                    We are focused on making travel
+                    simpler through professional guidance,
+                    clear communication and responsive
+                    customer support.
+
+                </p>
+
+                <p>
+
+                    Whether you are travelling for
+                    business, family, leisure or a group
+                    journey, we are here to help you
+                    navigate your travel plans.
+
                 </p>
 
             </div>
@@ -1453,18 +1350,241 @@
         </div>
 
 
+        <!-- COLORFUL STRIP -->
 
-        <!-- COPYRIGHT -->
+        <div class="container">
 
-        <div class="copyright">
+            <div class="color-strip">
 
-            <div class="container">
+                <div class="color-box color-blue"></div>
 
-                © <span id="year"></span>
-                Centispin Travel Agency.
-                All rights reserved.
+                <div class="color-box color-yellow"></div>
+
+                <div class="color-box color-orange"></div>
+
+                <div class="color-box color-green"></div>
 
             </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         HIGHLIGHTS
+    ========================================== -->
+
+    <section class="highlights">
+
+        <div class="container">
+
+
+            <div class="section-title">
+
+                <p class="eyebrow">
+                    CENTISPIN
+                </p>
+
+                <h2>
+                    Travel made easier.
+                </h2>
+
+                <p>
+
+                    We are building a travel service
+                    centred around people, reliability
+                    and care.
+
+                </p>
+
+            </div>
+
+
+            <div class="highlight-grid">
+
+
+                <!-- CARD 1 -->
+
+                <div class="highlight">
+
+                    <div class="highlight-icon">
+                        🌏
+                    </div>
+
+                    <h3>
+                        Local & Global
+                    </h3>
+
+                    <p>
+
+                        Travel connections within Papua
+                        New Guinea and to international
+                        destinations.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- CARD 2 -->
+
+                <div class="highlight">
+
+                    <div class="highlight-icon">
+                        💛
+                    </div>
+
+                    <h3>
+                        Customer Care
+                    </h3>
+
+                    <p>
+
+                        We value clear communication,
+                        professional guidance and
+                        responsive support.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- CARD 3 -->
+
+                <div class="highlight">
+
+                    <div class="highlight-icon">
+                        ✈️
+                    </div>
+
+                    <h3>
+                        Your Journey
+                    </h3>
+
+                    <p>
+
+                        From planning to travel,
+                        our goal is to help make
+                        your journey simpler.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CTA
+    ========================================== -->
+
+    <section class="cta">
+
+        <div class="container">
+
+            <p class="eyebrow"
+               style="color:#ffc928;">
+
+                LET'S GET YOU MOVING
+
+            </p>
+
+
+            <h2>
+
+                Where will your journey take you?
+
+            </h2>
+
+
+            <p>
+
+                Explore Centispin Travel Agency and
+                discover how we can assist with your
+                travel plans.
+
+            </p>
+
+
+            <a href="contact.html"
+               class="btn btn-yellow">
+
+                Start Your Journey
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+        <div class="container footer-content">
+
+
+            <div class="footer-logo">
+
+                <div class="logo-circle">
+
+                    <img src="images/logo.png"
+                         alt="Centispin Travel Agency Logo">
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        CENTISPIN
+                    </strong>
+
+                    <span>
+                        TRAVEL AGENCY
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <div>
+                    📞 +675 78391486
+                </div>
+
+                <div>
+                    📞 +675 83301312
+                </div>
+
+                <div>
+                    ✉ centispinta@gmail.com
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="container copyright">
+
+            © <span id="year"></span>
+            Centispin Travel Agency.
+            All Rights Reserved.
 
         </div>
 
@@ -1472,140 +1592,13 @@
 
 
 
-    <!-- =====================================================
+    <!-- =========================================
          JAVASCRIPT
-    ===================================================== -->
+    ========================================== -->
 
     <script>
 
-        /* ==============================
-           MOBILE MENU
-        ============================== */
-
-        const menuToggle =
-            document.querySelector(".menu-toggle");
-
-        const navLinks =
-            document.querySelector(".nav-links");
-
-
-        menuToggle.addEventListener("click", function () {
-
-            navLinks.classList.toggle("active");
-
-            const opened =
-                navLinks.classList.contains("active");
-
-            menuToggle.setAttribute(
-                "aria-expanded",
-                opened
-            );
-
-            menuToggle.innerHTML =
-                opened ? "✕" : "☰";
-
-        });
-
-
-
-        /* ==============================
-           CLOSE MOBILE MENU
-        ============================== */
-
-        document
-            .querySelectorAll(".nav-links a")
-            .forEach(function(link) {
-
-                link.addEventListener(
-                    "click",
-                    function() {
-
-                        navLinks.classList.remove(
-                            "active"
-                        );
-
-                        menuToggle.setAttribute(
-                            "aria-expanded",
-                            "false"
-                        );
-
-                        menuToggle.innerHTML = "☰";
-
-                    }
-                );
-
-            });
-
-
-
-        /* ==============================
-           ACTIVE NAVIGATION
-        ============================== */
-
-        const sections =
-            document.querySelectorAll("section[id]");
-
-        const navigationLinks =
-            document.querySelectorAll(
-                ".nav-links a"
-            );
-
-
-        window.addEventListener(
-            "scroll",
-            function() {
-
-                let current = "";
-
-                sections.forEach(function(section) {
-
-                    const sectionTop =
-                        section.offsetTop - 150;
-
-                    if (
-                        window.scrollY >= sectionTop
-                    ) {
-
-                        current =
-                            section.getAttribute("id");
-
-                    }
-
-                });
-
-
-                navigationLinks.forEach(
-                    function(link) {
-
-                        link.classList.remove(
-                            "active"
-                        );
-
-                        if (
-                            link.getAttribute("href") ===
-                            "#" + current
-                        ) {
-
-                            link.classList.add(
-                                "active"
-                            );
-
-                        }
-
-                    }
-                );
-
-            }
-        );
-
-
-
-        /* ==============================
-           CURRENT YEAR
-        ============================== */
-
-        document.getElementById("year")
-            .textContent =
+        document.getElementById("year").textContent =
             new Date().getFullYear();
 
     </script>
