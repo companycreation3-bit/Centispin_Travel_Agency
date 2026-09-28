@@ -12,11 +12,9 @@
 
     <title>Destinations | Centispin Travel Agency</title>
 
-
     <!-- GOOGLE FONTS -->
 
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect"
           href="https://fonts.gstatic.com"
@@ -65,7 +63,6 @@
         ========================== */
 
         :root {
-
             --blue: #0876b9;
             --blue-dark: #064c78;
             --sky: #39b9e8;
@@ -76,7 +73,6 @@
             --light: #f3faff;
             --white: #ffffff;
             --gray: #657582;
-
         }
 
 
@@ -85,11 +81,9 @@
         ========================== */
 
         .container {
-
             width: 92%;
             max-width: 1180px;
             margin: auto;
-
         }
 
 
@@ -98,22 +92,19 @@
         ========================== */
 
         header {
-
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 100;
             padding: 20px 0;
-
         }
 
         .navbar {
-
             display: flex;
             align-items: center;
             justify-content: space-between;
-
+            position: relative;
         }
 
 
@@ -122,15 +113,12 @@
         ========================== */
 
         .logo {
-
             display: flex;
             align-items: center;
             gap: 14px;
-
         }
 
         .logo-circle {
-
             width: 68px;
             height: 68px;
             border-radius: 50%;
@@ -141,90 +129,149 @@
             justify-content: center;
             box-shadow: 0 8px 25px rgba(0,0,0,0.20);
             border: 3px solid var(--yellow);
-
         }
 
         .logo-circle img {
-
             width: 100%;
             height: 100%;
             object-fit: contain;
             border-radius: 50%;
-
         }
 
         .logo-text {
-
             color: white;
             line-height: 1.1;
-
         }
 
         .logo-text strong {
-
             display: block;
             font-size: 20px;
             font-weight: 800;
             letter-spacing: 1px;
-
         }
 
         .logo-text span {
-
             font-size: 10px;
             letter-spacing: 2px;
             font-weight: 600;
             color: var(--yellow);
-
         }
 
 
         /* =========================
-           NAVIGATION
+           DESKTOP NAVIGATION
         ========================== */
 
         .nav-links {
-
             display: flex;
             align-items: center;
             gap: 28px;
-
         }
 
         .nav-links a {
-
             color: white;
             font-size: 13px;
             font-weight: 600;
             transition: 0.3s;
-
         }
 
         .nav-links a:hover {
-
             color: var(--yellow);
-
         }
 
         .nav-links .active {
-
             color: var(--yellow);
-
         }
 
         .contact-button {
-
             background: var(--yellow);
             color: var(--dark) !important;
             padding: 11px 20px;
             border-radius: 30px;
-
         }
 
         .contact-button:hover {
-
             background: white;
+        }
 
+
+        /* =========================
+           MOBILE MENU
+        ========================== */
+
+        .mobile-menu-toggle {
+            display: none;
+            width: 46px;
+            height: 46px;
+            border: 1px solid rgba(255,255,255,0.35);
+            border-radius: 12px;
+            background: rgba(6,76,120,0.55);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 5px;
+            padding: 0;
+        }
+
+        .mobile-menu-toggle span {
+            width: 22px;
+            height: 2px;
+            background: var(--white);
+            border-radius: 2px;
+            transition: 0.3s ease;
+        }
+
+        .mobile-menu-toggle:hover {
+            border-color: var(--yellow);
+        }
+
+        .mobile-menu-toggle.open span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .mobile-menu-toggle.open span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-toggle.open span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 0;
+            right: 0;
+            padding: 10px;
+            background: rgba(6,76,120,0.98);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 16px;
+            box-shadow: 0 18px 40px rgba(0,0,0,0.22);
+            z-index: 200;
+        }
+
+        .mobile-menu.open {
+            display: block;
+        }
+
+        .mobile-menu a {
+            display: block;
+            color: var(--white);
+            padding: 13px 15px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 700;
+            transition: 0.25s ease;
+        }
+
+        .mobile-menu a:hover,
+        .mobile-menu a.active {
+            background: rgba(255,201,40,0.14);
+            color: var(--yellow);
         }
 
 
@@ -233,7 +280,6 @@
         ========================== */
 
         .page-hero {
-
             min-height: 560px;
             position: relative;
             display: flex;
@@ -241,21 +287,17 @@
             overflow: hidden;
 
             background:
-
                 linear-gradient(
                     120deg,
                     rgba(4,57,91,0.94),
                     rgba(7,118,185,0.76),
                     rgba(25,164,194,0.58)
                 ),
-
                 url("images/hero.jpg")
                 center/cover no-repeat;
-
         }
 
         .page-hero::before {
-
             content: "";
             position: absolute;
             width: 500px;
@@ -264,11 +306,9 @@
             background: rgba(255,201,40,0.12);
             right: -150px;
             top: -180px;
-
         }
 
         .page-hero::after {
-
             content: "";
             position: absolute;
             width: 340px;
@@ -277,11 +317,9 @@
             background: rgba(57,185,232,0.15);
             left: -120px;
             bottom: -170px;
-
         }
 
         .hero-content {
-
             position: relative;
             z-index: 2;
             color: white;
@@ -289,41 +327,32 @@
             max-width: 850px;
             margin: auto;
             padding-top: 80px;
-
         }
 
         .hero-label {
-
             color: var(--yellow);
             font-size: 12px;
             font-weight: 800;
             letter-spacing: 3px;
             margin-bottom: 18px;
-
         }
 
         .hero-content h1 {
-
             font-family: "Playfair Display", serif;
             font-size: clamp(48px, 7vw, 76px);
             line-height: 1.1;
             margin-bottom: 20px;
-
         }
 
         .hero-content h1 span {
-
             color: var(--yellow);
-
         }
 
         .hero-content p {
-
             max-width: 700px;
             margin: auto;
             color: rgba(255,255,255,0.90);
             font-size: 17px;
-
         }
 
 
@@ -332,45 +361,35 @@
         ========================== */
 
         .destination-intro {
-
             padding: 100px 0 65px;
             background: white;
-
         }
 
         .section-heading {
-
             text-align: center;
             max-width: 760px;
             margin: auto;
-
         }
 
         .eyebrow {
-
             color: var(--blue);
             font-size: 12px;
             font-weight: 800;
             letter-spacing: 2px;
             margin-bottom: 12px;
-
         }
 
         .section-heading h2 {
-
             font-family: "Playfair Display", serif;
             color: var(--dark);
             font-size: 46px;
             line-height: 1.2;
             margin-bottom: 18px;
-
         }
 
         .section-heading p {
-
             color: var(--gray);
             font-size: 15px;
-
         }
 
 
@@ -379,17 +398,13 @@
         ========================== */
 
         .color-strip {
-
             display: grid;
             grid-template-columns: repeat(4,1fr);
             margin-top: 60px;
-
         }
 
         .color-box {
-
             height: 8px;
-
         }
 
         .color-blue {
@@ -414,22 +429,17 @@
         ========================== */
 
         .destinations {
-
             padding: 45px 0 100px;
             background: white;
-
         }
 
         .destination-grid {
-
             display: grid;
             grid-template-columns: repeat(3,1fr);
             gap: 28px;
-
         }
 
         .destination-card {
-
             position: relative;
             min-height: 390px;
             border-radius: 24px;
@@ -437,34 +447,26 @@
             background: var(--dark);
             box-shadow: 0 15px 40px rgba(0,0,0,0.12);
             transition: 0.3s;
-
         }
 
         .destination-card:hover {
-
             transform: translateY(-8px);
             box-shadow: 0 22px 50px rgba(0,0,0,0.18);
-
         }
 
         .destination-card img {
-
             width: 100%;
             height: 100%;
             min-height: 390px;
             object-fit: cover;
             transition: 0.5s;
-
         }
 
         .destination-card:hover img {
-
             transform: scale(1.05);
-
         }
 
         .destination-overlay {
-
             position: absolute;
             inset: 0;
 
@@ -474,21 +476,17 @@
                     rgba(4,30,45,0.92),
                     rgba(4,30,45,0.08) 70%
                 );
-
         }
 
         .destination-content {
-
             position: absolute;
             left: 28px;
             right: 28px;
             bottom: 27px;
             color: white;
-
         }
 
         .destination-tag {
-
             display: inline-block;
             background: var(--yellow);
             color: var(--dark);
@@ -498,22 +496,17 @@
             font-weight: 800;
             letter-spacing: 1px;
             margin-bottom: 10px;
-
         }
 
         .destination-content h3 {
-
             font-family: "Playfair Display", serif;
             font-size: 30px;
             margin-bottom: 8px;
-
         }
 
         .destination-content p {
-
             color: rgba(255,255,255,0.82);
             font-size: 13px;
-
         }
 
 
@@ -522,60 +515,47 @@
         ========================== */
 
         .png-section {
-
             padding: 95px 0;
             background: var(--light);
-
         }
 
         .png-grid {
-
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 70px;
             align-items: center;
-
         }
 
         .png-content h2 {
-
             font-family: "Playfair Display", serif;
             color: var(--dark);
             font-size: 45px;
             line-height: 1.2;
             margin-bottom: 20px;
-
         }
 
         .png-content p {
-
             color: var(--gray);
             font-size: 15px;
             margin-bottom: 18px;
-
         }
 
         .travel-points {
-
             display: grid;
             gap: 13px;
             margin-top: 25px;
-
         }
 
         .travel-point {
-
             display: flex;
             align-items: center;
             gap: 12px;
             font-size: 14px;
             font-weight: 600;
             color: var(--dark);
-
         }
 
         .travel-icon {
-
             width: 32px;
             height: 32px;
             border-radius: 50%;
@@ -584,7 +564,6 @@
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
-
         }
 
 
@@ -593,24 +572,19 @@
         ========================== */
 
         .png-visual {
-
             position: relative;
             min-height: 430px;
-
         }
 
         .png-visual img {
-
             width: 90%;
             height: 390px;
             object-fit: cover;
             border-radius: 28px;
             box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-
         }
 
         .png-badge {
-
             position: absolute;
             right: 0;
             bottom: 5px;
@@ -620,24 +594,19 @@
             border-radius: 20px;
             text-align: center;
             box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-
         }
 
         .png-badge strong {
-
             display: block;
             font-family: "Playfair Display", serif;
             color: var(--dark);
             font-size: 25px;
-
         }
 
         .png-badge span {
-
             color: var(--dark);
             font-size: 11px;
             font-weight: 700;
-
         }
 
 
@@ -646,35 +615,27 @@
         ========================== */
 
         .travel-types {
-
             padding: 95px 0;
             background: white;
-
         }
 
         .travel-type-grid {
-
             display: grid;
             grid-template-columns: repeat(4,1fr);
             gap: 22px;
             margin-top: 50px;
-
         }
 
         .travel-type {
-
             padding: 30px 22px;
             background: var(--light);
             border-radius: 20px;
             text-align: center;
             transition: 0.3s;
-
         }
 
         .travel-type:hover {
-
             transform: translateY(-6px);
-
         }
 
         .travel-type:nth-child(1) {
@@ -694,25 +655,19 @@
         }
 
         .travel-type-icon {
-
             font-size: 35px;
             margin-bottom: 12px;
-
         }
 
         .travel-type h3 {
-
             color: var(--dark);
             font-size: 16px;
             margin-bottom: 8px;
-
         }
 
         .travel-type p {
-
             color: var(--gray);
             font-size: 12px;
-
         }
 
 
@@ -721,7 +676,6 @@
         ========================== */
 
         .cta {
-
             padding: 90px 0;
 
             background:
@@ -733,27 +687,21 @@
 
             color: white;
             text-align: center;
-
         }
 
         .cta h2 {
-
             font-family: "Playfair Display", serif;
             font-size: 48px;
             margin-bottom: 15px;
-
         }
 
         .cta p {
-
             max-width: 650px;
             margin: 0 auto 30px;
             color: rgba(255,255,255,0.85);
-
         }
 
         .btn {
-
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -762,21 +710,16 @@
             font-size: 14px;
             font-weight: 700;
             transition: 0.3s;
-
         }
 
         .btn-yellow {
-
             background: var(--yellow);
             color: var(--dark);
-
         }
 
         .btn-yellow:hover {
-
             background: white;
             transform: translateY(-3px);
-
         }
 
 
@@ -785,69 +728,53 @@
         ========================== */
 
         footer {
-
             background: var(--dark);
             color: white;
             padding: 50px 0 25px;
-
         }
 
         .footer-content {
-
             display: flex;
             justify-content: space-between;
             align-items: center;
             gap: 30px;
-
         }
 
         .footer-logo {
-
             display: flex;
             align-items: center;
             gap: 12px;
-
         }
 
         .footer-logo .logo-circle {
-
             width: 55px;
             height: 55px;
-
         }
 
         .footer-logo strong {
-
             display: block;
             font-size: 17px;
-
         }
 
         .footer-logo span {
-
             color: var(--yellow);
             font-size: 9px;
             letter-spacing: 1.5px;
-
         }
 
         .footer-contact {
-
             text-align: right;
             color: rgba(255,255,255,0.7);
             font-size: 13px;
-
         }
 
         .copyright {
-
             text-align: center;
             border-top: 1px solid rgba(255,255,255,0.1);
             margin-top: 40px;
             padding-top: 20px;
             color: rgba(255,255,255,0.45);
             font-size: 12px;
-
         }
 
 
@@ -887,8 +814,14 @@
                 height: 60px;
             }
 
+            /* Hide desktop navigation */
             .nav-links {
                 display: none;
+            }
+
+            /* Show mobile menu button */
+            .mobile-menu-toggle {
+                display: flex;
             }
 
             .page-hero {
@@ -970,7 +903,6 @@
 
         <div class="container navbar">
 
-
             <!-- LOGO -->
 
             <a href="index.html" class="logo">
@@ -997,7 +929,7 @@
             </a>
 
 
-            <!-- NAVIGATION -->
+            <!-- DESKTOP NAVIGATION -->
 
             <nav class="nav-links">
 
@@ -1029,6 +961,55 @@
 
             </nav>
 
+
+            <!-- MOBILE MENU BUTTON -->
+
+            <button class="mobile-menu-toggle"
+                    id="mobileMenuToggle"
+                    type="button"
+                    aria-label="Open menu"
+                    aria-expanded="false"
+                    aria-controls="mobileMenu">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+
+            <!-- MOBILE DROPDOWN -->
+
+            <div class="mobile-menu"
+                 id="mobileMenu">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <a href="destinations.html"
+                   class="active">
+                    Destinations
+                </a>
+
+                <a href="why-us.html">
+                    Why Us
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
         </div>
 
     </header>
@@ -1050,19 +1031,15 @@
                 </div>
 
                 <h1>
-
                     The world is
                     <span>waiting.</span>
-
                 </h1>
 
                 <p>
-
                     From journeys within Papua New Guinea
                     to international adventures, Centispin
                     is here to help you plan your next
                     destination.
-
                 </p>
 
             </div>
@@ -1092,13 +1069,11 @@
                 </h2>
 
                 <p>
-
                     Every journey is different. Whether you
                     are travelling close to home, exploring
                     the region or heading overseas, our
                     travel support is designed to help you
                     prepare for the journey ahead.
-
                 </p>
 
             </div>
@@ -1153,12 +1128,10 @@
                         </h3>
 
                         <p>
-
                             Discover journeys across our
                             beautiful country and connect
                             with the places that matter
                             to you.
-
                         </p>
 
                     </div>
@@ -1186,11 +1159,9 @@
                         </h3>
 
                         <p>
-
                             Plan your next journey beyond
                             Papua New Guinea and explore
                             opportunities across the region.
-
                         </p>
 
                     </div>
@@ -1218,11 +1189,9 @@
                         </h3>
 
                         <p>
-
                             Take your journey further with
                             international travel planning and
                             flight booking support.
-
                         </p>
 
                     </div>
@@ -1259,20 +1228,16 @@
                     </h2>
 
                     <p>
-
                         Papua New Guinea offers remarkable
                         opportunities for travel, connection
                         and discovery.
-
                     </p>
 
                     <p>
-
                         Whether you are travelling for family,
                         business, community, leisure or other
                         purposes, Centispin can help you
                         organize your travel plans.
-
                     </p>
 
 
@@ -1375,11 +1340,9 @@
                 </h2>
 
                 <p>
-
                     Tell us where you want to go and what
                     your journey looks like. We can help
                     you plan the travel support you need.
-
                 </p>
 
             </div>
@@ -1487,10 +1450,8 @@
             </h2>
 
             <p>
-
                 Start planning your journey with
                 Centispin Travel Agency.
-
             </p>
 
             <a href="contact.html"
@@ -1576,8 +1537,117 @@
 
     <script>
 
+        /* CURRENT YEAR */
+
         document.getElementById("year").textContent =
             new Date().getFullYear();
+
+
+        /* MOBILE MENU */
+
+        const mobileMenuToggle =
+            document.getElementById("mobileMenuToggle");
+
+        const mobileMenu =
+            document.getElementById("mobileMenu");
+
+
+        function closeMobileMenu() {
+
+            mobileMenu.classList.remove("open");
+
+            mobileMenuToggle.classList.remove("open");
+
+            mobileMenuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            mobileMenuToggle.setAttribute(
+                "aria-label",
+                "Open menu"
+            );
+
+        }
+
+
+        mobileMenuToggle.addEventListener(
+            "click",
+            function(event) {
+
+                event.stopPropagation();
+
+                const isOpen =
+                    mobileMenu.classList.toggle("open");
+
+                mobileMenuToggle.classList.toggle(
+                    "open",
+                    isOpen
+                );
+
+                mobileMenuToggle.setAttribute(
+                    "aria-expanded",
+                    String(isOpen)
+                );
+
+                mobileMenuToggle.setAttribute(
+                    "aria-label",
+                    isOpen
+                        ? "Close menu"
+                        : "Open menu"
+                );
+
+            }
+        );
+
+
+        /* CLOSE AFTER CLICKING A LINK */
+
+        mobileMenu
+            .querySelectorAll("a")
+            .forEach(function(link) {
+
+                link.addEventListener(
+                    "click",
+                    closeMobileMenu
+                );
+
+            });
+
+
+        /* CLOSE WHEN CLICKING OUTSIDE */
+
+        document.addEventListener(
+            "click",
+            function(event) {
+
+                if (
+                    !mobileMenu.contains(event.target) &&
+                    !mobileMenuToggle.contains(event.target)
+                ) {
+
+                    closeMobileMenu();
+
+                }
+
+            }
+        );
+
+
+        /* CLOSE WHEN RETURNING TO DESKTOP */
+
+        window.addEventListener(
+            "resize",
+            function() {
+
+                if (window.innerWidth > 700) {
+
+                    closeMobileMenu();
+
+                }
+
+            }
+        );
 
     </script>
 
