@@ -15,8 +15,7 @@
 
     <!-- GOOGLE FONTS -->
 
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect"
           href="https://fonts.gstatic.com"
@@ -113,6 +112,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            position: relative;
 
         }
 
@@ -180,7 +180,7 @@
 
 
         /* =========================
-           NAVIGATION
+           DESKTOP NAVIGATION
         ========================== */
 
         .nav-links {
@@ -224,6 +224,107 @@
         .contact-button:hover {
 
             background: white;
+
+        }
+
+
+        /* =========================
+           MOBILE MENU
+        ========================== */
+
+        .mobile-menu-toggle {
+
+            display: none;
+            width: 46px;
+            height: 46px;
+            border: 1px solid rgba(255,255,255,0.35);
+            border-radius: 12px;
+            background: rgba(6,76,120,0.55);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 5px;
+            padding: 0;
+
+        }
+
+        .mobile-menu-toggle span {
+
+            width: 22px;
+            height: 2px;
+            background: var(--white);
+            border-radius: 2px;
+            transition: 0.3s ease;
+
+        }
+
+        .mobile-menu-toggle:hover {
+
+            border-color: var(--yellow);
+
+        }
+
+        .mobile-menu-toggle.open span:nth-child(1) {
+
+            transform: translateY(7px) rotate(45deg);
+
+        }
+
+        .mobile-menu-toggle.open span:nth-child(2) {
+
+            opacity: 0;
+
+        }
+
+        .mobile-menu-toggle.open span:nth-child(3) {
+
+            transform: translateY(-7px) rotate(-45deg);
+
+        }
+
+
+        .mobile-menu {
+
+            display: none;
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 0;
+            right: 0;
+            padding: 10px;
+            background: rgba(6,76,120,0.98);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 16px;
+            box-shadow: 0 18px 40px rgba(0,0,0,0.22);
+            z-index: 200;
+
+        }
+
+        .mobile-menu.open {
+
+            display: block;
+
+        }
+
+        .mobile-menu a {
+
+            display: block;
+            color: var(--white);
+            padding: 13px 15px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 700;
+            transition: 0.25s ease;
+
+        }
+
+        .mobile-menu a:hover,
+        .mobile-menu a.active {
+
+            background: rgba(255,201,40,0.14);
+            color: var(--yellow);
 
         }
 
@@ -732,6 +833,7 @@
             padding: 90px 0;
 
             background:
+
                 linear-gradient(
                     120deg,
                     var(--blue-dark),
@@ -894,8 +996,16 @@
                 height: 60px;
             }
 
+            /* Hide desktop navigation */
+
             .nav-links {
                 display: none;
+            }
+
+            /* Show mobile hamburger */
+
+            .mobile-menu-toggle {
+                display: flex;
             }
 
             .page-hero {
@@ -1000,7 +1110,7 @@
             </a>
 
 
-            <!-- NAVIGATION -->
+            <!-- DESKTOP NAVIGATION -->
 
             <nav class="nav-links">
 
@@ -1032,6 +1142,55 @@
 
             </nav>
 
+
+            <!-- MOBILE MENU BUTTON -->
+
+            <button class="mobile-menu-toggle"
+                    id="mobileMenuToggle"
+                    type="button"
+                    aria-label="Open menu"
+                    aria-expanded="false"
+                    aria-controls="mobileMenu">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+
+            <!-- MOBILE DROPDOWN -->
+
+            <div class="mobile-menu"
+                 id="mobileMenu">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="services.html"
+                   class="active">
+                    Services
+                </a>
+
+                <a href="destinations.html">
+                    Destinations
+                </a>
+
+                <a href="why-us.html">
+                    Why Us
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
         </div>
 
     </header>
@@ -1053,19 +1212,15 @@
                 </div>
 
                 <h1>
-
                     Travel made
                     <span>simpler.</span>
-
                 </h1>
 
                 <p>
-
                     From flight booking support to travel
                     planning and customer care, Centispin
                     is building services designed to make
                     your journey easier.
-
                 </p>
 
             </div>
@@ -1095,13 +1250,11 @@
                 </h2>
 
                 <p>
-
                     Our planned services are focused on
                     providing professional guidance,
                     responsive support and practical
                     travel solutions for individuals,
                     families, groups and organizations.
-
                 </p>
 
             </div>
@@ -1153,12 +1306,10 @@
                     </h3>
 
                     <p>
-
                         Flight booking support for travel
                         within Papua New Guinea, helping
                         customers plan their domestic
                         journeys.
-
                     </p>
 
                 </div>
@@ -1181,12 +1332,10 @@
                     </h3>
 
                     <p>
-
                         International flight booking support
                         for customers travelling from Papua
                         New Guinea to destinations around
                         the world.
-
                     </p>
 
                 </div>
@@ -1209,11 +1358,9 @@
                     </h3>
 
                     <p>
-
                         Professional travel guidance and
                         itinerary planning to help customers
                         organize their travel requirements.
-
                     </p>
 
                 </div>
@@ -1236,11 +1383,9 @@
                     </h3>
 
                     <p>
-
                         Support for leisure, family and group
                         travel arrangements, helping make
                         shared journeys easier to organize.
-
                     </p>
 
                 </div>
@@ -1263,11 +1408,9 @@
                     </h3>
 
                     <p>
-
                         Travel assistance for businesses and
                         organizations requiring professional
                         support for business travel.
-
                     </p>
 
                 </div>
@@ -1290,11 +1433,9 @@
                     </h3>
 
                     <p>
-
                         Guidance to help travellers understand
                         their travel documentation requirements
                         and prepare for their journey.
-
                     </p>
 
                 </div>
@@ -1329,20 +1470,16 @@
                     </h2>
 
                     <p>
-
                         At Centispin, our goal is to simplify
                         the travel process by combining
                         professional guidance with responsive
                         customer support.
-
                     </p>
 
                     <p>
-
                         We want customers to feel informed,
                         supported and confident as they
                         prepare for their journey.
-
                     </p>
 
 
@@ -1421,13 +1558,11 @@
                         </h3>
 
                         <p>
-
                             We are building Centispin around
                             a simple idea: travel should be
                             easier to understand, easier to
                             organize and supported by people
                             who care.
-
                         </p>
 
                     </div>
@@ -1461,10 +1596,8 @@
                 </h2>
 
                 <p>
-
                     Our services are designed with a range
                     of travellers and organizations in mind.
-
                 </p>
 
             </div>
@@ -1565,11 +1698,9 @@
             </h2>
 
             <p>
-
                 Talk to Centispin Travel Agency about
                 your travel plans and let us help you
                 find the right way forward.
-
             </p>
 
             <a href="contact.html"
@@ -1655,8 +1786,117 @@
 
     <script>
 
+        /* CURRENT YEAR */
+
         document.getElementById("year").textContent =
             new Date().getFullYear();
+
+
+        /* MOBILE MENU */
+
+        const mobileMenuToggle =
+            document.getElementById("mobileMenuToggle");
+
+        const mobileMenu =
+            document.getElementById("mobileMenu");
+
+
+        function closeMobileMenu() {
+
+            mobileMenu.classList.remove("open");
+
+            mobileMenuToggle.classList.remove("open");
+
+            mobileMenuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            mobileMenuToggle.setAttribute(
+                "aria-label",
+                "Open menu"
+            );
+
+        }
+
+
+        mobileMenuToggle.addEventListener(
+            "click",
+            function(event) {
+
+                event.stopPropagation();
+
+                const isOpen =
+                    mobileMenu.classList.toggle("open");
+
+                mobileMenuToggle.classList.toggle(
+                    "open",
+                    isOpen
+                );
+
+                mobileMenuToggle.setAttribute(
+                    "aria-expanded",
+                    String(isOpen)
+                );
+
+                mobileMenuToggle.setAttribute(
+                    "aria-label",
+                    isOpen
+                        ? "Close menu"
+                        : "Open menu"
+                );
+
+            }
+        );
+
+
+        /* CLOSE AFTER CLICKING A LINK */
+
+        mobileMenu
+            .querySelectorAll("a")
+            .forEach(function(link) {
+
+                link.addEventListener(
+                    "click",
+                    closeMobileMenu
+                );
+
+            });
+
+
+        /* CLOSE WHEN CLICKING OUTSIDE */
+
+        document.addEventListener(
+            "click",
+            function(event) {
+
+                if (
+                    !mobileMenu.contains(event.target) &&
+                    !mobileMenuToggle.contains(event.target)
+                ) {
+
+                    closeMobileMenu();
+
+                }
+
+            }
+        );
+
+
+        /* CLOSE WHEN RETURNING TO DESKTOP */
+
+        window.addEventListener(
+            "resize",
+            function() {
+
+                if (window.innerWidth > 700) {
+
+                    closeMobileMenu();
+
+                }
+
+            }
+        );
 
     </script>
 
